@@ -1,58 +1,104 @@
-# ⚙️ GTTOOLS — 150+ Free Online Tools (Text • Image • Developer)
-Welcome to **GTTOOLS**, a powerful collection of **150+ completely free, fast, and frontend-only tools** for text editing, image processing, and developer utilities — all in one clean and blazing-fast interface.
+# ⚙️ GTTOOLS – 100+ Free Online Tools (Text + Image + PDF + Dev + Utility)
 
-GTTOOLS runs entirely in your browser using **HTML + CSS + JavaScript**.  
-🚀 **No login, no API keys, no backend, no limits.**
+GTTOOLS is a **collection of 100+ highly useful, fast, and fully frontend tools**  
+designed for everyday users, developers, creators, students, editors, and productivity lovers.
 
----
-
-## 🌟 Features of GTTOOLS
-
-### 📝 50+ Text Tools
-- Case converters: UPPERCASE / lowercase / Title Case  
-- Remove extra spaces, empty lines, duplicates  
-- Word / character / line counters  
-- Find & Replace  
-- Slug generator, camelCase, snake_case, hashtag tools  
-- JSON formatter, Base64 tools, HTML cleaner  
-- Text reverse, line operations, formatting tools  
+All tools run **100% in the browser** —  
+✔ No login  
+✔ No database  
+✔ No API keys  
+✔ No backend  
+✔ Lightning-fast performance
 
 ---
 
-### 🖼️ 50 Image Tools (Pure Frontend Canvas)
-- Resize, crop, rotate, flip  
-- Brightness, contrast, saturation, sharpness  
-- Grayscale, invert, sepia, pixelate  
-- Add watermark, add text, draw on image  
-- JPG ↔ PNG ↔ WebP converters  
-- Image → Base64 and Base64 → Image  
-- Circle crop, rounded corners, shadow, filters  
-- Download compressed images  
+## 🚀 Live Demo  
+(**Your GitHub Pages link**)  
+➡️ https://USERNAME.github.io/gttools/
+
+(Replace USERNAME with your GitHub username)
 
 ---
 
-### 👨‍💻 50 Developer Tools
-- JSON validator / formatter / minifier  
-- CSV ↔ JSON converter  
-- URL encode / decode  
-- Base64 encode / decode  
-- UUID generator, API key generator  
-- Regex tester  
-- JS / CSS / HTML beautifier + minifier  
-- Color converter (HEX ↔ RGB ↔ HSL)  
-- Markdown ↔ HTML converter  
-- Diff checker  
-- QR code generator + reader  
+## 📌 Features
+
+### 🔹 **TEXT TOOLS (25)**  
+- Word Counter  
+- Character Counter  
+- Remove Extra Spaces / Line Breaks  
+- Sort Lines A→Z / Z→A  
+- Uppercase / Lowercase / Title Case  
+- Reverse Text  
+- Email / URL / Number Extractor  
+- Slug Generator  
+- Random Password Generator  
+- Lorem Ipsum Generator  
+- Binary ↔ Text  
+- Reading Time Calculator  
+
+### 🖼 **IMAGE TOOLS (20)**  
+- Resize Image  
+- Rotate, Flip  
+- Grayscale, Invert, Sepia  
+- Brightness ±  
+- Blur, Pixelate  
+- Border, Rounded Corners, Circle Crop  
+- JPG ↔ PNG ↔ WEBP convert (frontend basic)  
+- Download PNG / JPG  
+- Base64 Converter  
+
+### 📄 **PDF TOOLS (15)**  
+(Frontend structure ready – advanced features planned)  
+- JPG → PDF  
+- PDF → JPG  
+- Word → PDF  
+- PPT → PDF  
+- PDF Merge  
+- PDF Split  
+- PDF Compress  
+- PDF Unlock / Protect  
+- Extract PDF Text  
+- PDF Metadata Viewer  
+
+### 👨‍💻 **DEVELOPER TOOLS (25)**  
+- JSON Formatter / Minifier / Viewer  
+- CSV ↔ JSON  
+- HTML / CSS / JS Beautifier  
+- Minifiers  
+- Regex Tester  
+- Diff Checker  
+- Base64 Encode/Decode  
+- URL Encode/Decode  
+- HTML Escape/Unescape  
+- UUID Generator  
+- JWT Decoder  
+- Color Converter  
+- QR Code (placeholder)  
+
+### 🛠 **UTILITY TOOLS (15)**  
+- Unit Converter (placeholder)  
+- Currency Converter (offline demo)  
+- Epoch ↔ Human Time  
+- Word Frequency Counter  
+- Markdown ↔ HTML  
+- Text Compare  
+- Fake Data Generator  
+- Emoji Extractor / Emoji Helper  
+- YouTube Thumbnail Info  
+- Instagram DP Info  
 
 ---
 
-## 🧩 Tech Stack
+## 🏗️ Tech Stack
+
 - **HTML5**  
-- **CSS3**  
-- **Vanilla JavaScript**  
-- **Canvas API**  
-- 0% backend, 100% browser-powered  
+- **CSS3 (Glassmorphism + Modern UI)**  
+- **Vanilla JavaScript (Pure Frontend)**  
+- **Canvas API** for Image Tools  
+- **Local Browser Processing Only**  
+- **No Server Required**
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
+
