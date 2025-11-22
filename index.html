@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GTTOOLS — 150+ Free Online Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Meta SEO -->
+  <meta name="description" content="GTTOOLS — 150+ Free Online Tools for Text, Image & Developers. Fast, free & frontend-only tools with no login." />
+  <meta name="keywords" content="GTTOOLS, online tools, free tools, text tools, image tools, developer tools, converters, formatters" />
+  <meta name="author" content="GTTOOLS" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">⚙️ GTTOOLS</div>
+      <div class="tagline">150+ Free Text • Image • Developer Tools</div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <div class="layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- SEARCH -->
+        <input 
+          type="text" 
+          id="searchBox" 
+          class="search-input" 
+          placeholder="Search tools..."
+        />
+
+        <!-- FILTER BUTTONS -->
+        <div class="group-filters">
+          <button class="group-btn active" data-group="all">All Tools</button>
+          <button class="group-btn" data-group="text">Text Tools</button>
+          <button class="group-btn" data-group="image">Image Tools</button>
+          <button class="group-btn" data-group="dev">Dev Tools</button>
+        </div>
+
+        <!-- TOOL LIST -->
+        <ul id="toolList" class="tool-list"></ul>
+      </aside>
+
+      <!-- MAIN WORKSPACE -->
+      <main class="main">
+        <div id="toolDetails" class="tool-details">
+
+          <h2>Welcome to GTTOOLS ⚙️</h2>
+          <p>
+            Left sidebar se koi bhi tool choose karo.<br><br>
+            ✔ Pure frontend (100% browser powered)<br>
+            ✔ No login • No backend • No API keys<br>
+            ✔ 150+ powerful tools — text, image & developer utilities
+          </p>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
