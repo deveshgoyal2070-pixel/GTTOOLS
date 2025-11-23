@@ -1,66 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>GTTOOLS — 100+ Free Online Tools</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTTOOLS — 100+ Free Online Tools</title>
 
-  <!-- Simple SEO -->
-  <meta name="description" content="GTTOOLS — 100+ free online tools for text, image, PDF, developer and utility tasks. Fast, clean and fully frontend." />
-  <meta name="author" content="GTTOOLS" />
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-thumb { background: #45a5ff; border-radius: 10px; }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f4faff;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: #ffffff;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2684ff;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .category-bar {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .cat-btn {
+            padding: 5px 12px;
+            font-size: 13px;
+            border: none;
+            border-radius: 20px;
+            background: #e8f3ff;
+            cursor: pointer;
+        }
+
+        .tool-item {
+            background: #f8fbff;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 8px 0;
+            cursor: pointer;
+            border: 1px solid #e4ecf5;
+        }
+
+        .tool-item:hover { background: #eaf4ff; }
+        .tool-item.active { background: #d8eaff; border-color: #5ba7ff; }
+
+        .tool-name { font-weight: 600; }
+        .tool-tag { font-size: 11px; color: #fff; padding: 2px 6px; border-radius: 4px; }
+
+        .text { background: #007bff; }
+        .pdf { background: #ff5722; }
+        .image { background: #9c27b0; }
+        .dev { background: #009688; }
+
+        /* Main Panel */
+        .main-panel {
+            flex: 1;
+            padding: 25px;
+            overflow-y: auto;
+        }
+
+        .selected-tool-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .text-area {
+            width: 100%;
+            min-height: 130px;
+            padding: 10px;
+            border: 1px solid #d0d8e2;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        #runTool {
+            background: #2684ff;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            margin: 10px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #toolOutput {
+            width: 100%;
+            min-height: 150px;
+            border: 1px solid #d0d8e2;
+            padding: 10px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        #resultInfo {
+            margin-top: 8px;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .welcome-box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e0e7ef;
+            margin-bottom: 15px;
+        }
+
+    </style>
 </head>
 
 <body>
-  <div class="app">
 
-    <!-- HEADER -->
-    <header class="header">
-      <div class="logo">⚙️ GTTOOLS</div>
-      <div class="tagline">100+ Free Text • Image • PDF • Dev • Utility Tools</div>
-    </header>
+    <div class="container">
 
-    <!-- LAYOUT -->
-    <div class="layout">
+        <!-- ============ SIDEBAR ============ -->
+        <div class="sidebar">
+            <div class="logo">⚡ GTTOOLS</div>
 
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <input
-          type="text"
-          id="searchBox"
-          class="search-input"
-          placeholder="Search tools..."
-        />
+            <div class="search-box">
+                <input type="text" id="searchBar" placeholder="Search tools..." />
+            </div>
 
-        <div class="group-filters">
-          <button class="group-btn active" data-group="all">All</button>
-          <button class="group-btn" data-group="text">Text</button>
-          <button class="group-btn" data-group="image">Image</button>
-          <button class="group-btn" data-group="pdf">PDF</button>
-          <button class="group-btn" data-group="dev">Dev</button>
-          <button class="group-btn" data-group="util">Utility</button>
+            <ul class="tool-list"></ul>
         </div>
 
-        <ul id="toolList" class="tool-list"></ul>
-      </aside>
+        <!-- ============ MAIN PANEL ============ -->
+        <div class="main-panel">
 
-      <!-- MAIN AREA -->
-      <main class="main">
-        <div id="toolDetails" class="tool-details">
-          <h2>Welcome to GTTOOLS ⚙️</h2>
-          <p>
-            Left sidebar se koi bhi tool choose karo.<br><br>
-            ✅ 100+ high-use tools (text, image, PDF, dev, utility)<br>
-            ✅ Pure frontend UI (no login, no database)<br>
-            ✅ Light, fast, mobile friendly
-          </p>
+            <div class="welcome-box">
+                <h2>Welcome to GTTOOLS ⚙</h2>
+                <p>Left sidebar se koi bhi tool choose karo.</p>
+                <ul>
+                    <li>✔ 100+ high-use tools (text, image, PDF, dev utility)</li>
+                    <li>✔ Pure frontend UI + Live PDF backend</li>
+                    <li>✔ Light, fast, mobile friendly</li>
+                </ul>
+            </div>
+
+            <h2 class="selected-tool-title">Choose a tool</h2>
+
+            <textarea id="userInput" class="text-area" placeholder="Enter your text or data here..."></textarea>
+
+            <button id="runTool">Run Tool</button>
+
+            <textarea id="toolOutput" readonly></textarea>
+
+            <div id="resultInfo"></div>
         </div>
-      </main>
 
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
