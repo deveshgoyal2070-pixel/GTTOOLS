@@ -3,19 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GTTOOLS — 100+ Free Online Tools</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Primary SEO -->
+  <title>GTTOOLS — 100+ Free Online Tools (PDF, Text, Image, Dev, Utility)</title>
+  <meta name="title" content="GTTOOLS — 100+ Free Online Tools">
+  <meta name="description" content="GTTOOLS offers 100+ fast and free online tools for PDF conversion, text utilities, image editing, developer tools, and productivity features. No login needed — instant results.">
+  <meta name="keywords" content="gttools, online tools, pdf tools, image tools, text tools, developer tools, free tools, pdf to word, pdf to excel, json formatter, text utilities">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deveshgoyal2070-pixel.github.io/gttools/">
+  <meta property="og:title" content="GTTOOLS — Free PDF, Image, Text & Dev Tools">
+  <meta property="og:description" content="100+ free online tools for PDFs, images, text editing, coding utilities and more. Fast, clean and no-login.">
+  <meta property="og:image" content="https://deveshgoyal2070-pixel.github.io/gttools/thumbnail.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GTTOOLS — 100+ Free Online Tools">
+  <meta name="twitter:description" content="Use 100+ fast, free tools for PDFs, Images, Text, Coding & Utilities. No login required.">
+  <meta name="twitter:image" content="https://deveshgoyal2070-pixel.github.io/gttools/thumbnail.png">
+
+  <!-- Performance Hints -->
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
   <div class="container">
+
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="logo">⚡ GTTOOLS</div>
 
       <div class="search-box">
-        <input type="text" id="searchBar" placeholder="Search tools..." />
+        <input type="text" id="searchBar" placeholder="Search tools...">
       </div>
 
       <ul class="tool-list"></ul>
@@ -23,64 +52,71 @@
 
     <!-- MAIN PANEL -->
     <div class="main-panel">
-      <!-- SIMPLE WELCOME BOX -->
-      <div id="welcomeBox" class="welcome-box">
-        <h2>Welcome to GTTOOLS — 100+ Free Online Tools</h2>
+
+      <!-- SEO Optimized Homepage -->
+      <div class="welcome-box">
+
+        <h1>GTTOOLS — The Ultimate Free Online Tools Platform</h1>
         <p>
-          GTTOOLS gives you a collection of free, fast and easy-to-use tools for text, images, PDFs,
-          developers and everyday utilities. No login, no signup — everything runs directly in your browser.
+          GTTOOLS brings you a powerful set of 100+ online tools for PDFs, text processing, developer utilities,
+          image editing, and productivity — all completely free and super fast. No login, no signup, no limits.
         </p>
-        <ul>
-          <li>🔥 100+ popular tools for daily work</li>
-          <li>📄 PDF → Word / PPT / Excel (server-powered)</li>
-          <li>🖼 Image editor (rotate, brightness, contrast, filters)</li>
-          <li>👨‍💻 Dev helpers (JSON, Base64, URL, regex)</li>
-          <li>🧮 Utility tools (age, EMI, BMI, unit converters)</li>
-          <li>📱 Works on desktop & mobile</li>
-          <li>🆓 100% free to use</li>
-        </ul>
-        <p><b>Select any tool from the left to get started.</b></p>
+
+        <h2>PDF Tools (Convert, Extract, Edit)</h2>
+        <p>Convert PDF to Word, Excel, and PowerPoint with real server-backed accuracy.</p>
+
+        <h2>Image Tools (Edit, Resize, Convert)</h2>
+        <p>Edit, crop, filter, rotate, and convert images instantly in your browser.</p>
+
+        <h2>Text Tools (Formatting & Cleaning)</h2>
+        <p>Remove duplicates, count words, clean text, change cases, and more.</p>
+
+        <h2>Developer Tools (Code, JSON, Base64)</h2>
+        <p>Format JSON, encode/decode Base64, beautify code, and test regular expressions.</p>
+
+        <h2>Utility Tools (Daily Productivity)</h2>
+        <p>Age calculator, timers, random generators, notes, lists, and more tools for daily tasks.</p>
+
+        <p><b>Select any tool from the left to start using it instantly!</b></p>
       </div>
 
+      <!-- TOOL TITLE -->
       <h2 class="selected-tool-title">Choose a tool</h2>
 
-      <textarea
-        id="userInput"
-        class="text-area"
-        placeholder="Enter your text or data here..."
-      ></textarea>
+      <!-- USER INPUT -->
+      <textarea id="userInput" class="text-area" placeholder="Enter your text or data here..."></textarea>
 
       <button id="runTool">Run Tool</button>
 
+      <!-- OUTPUT -->
       <textarea id="toolOutput" readonly></textarea>
-
       <div id="resultInfo"></div>
 
-      <!-- IMAGE TOOLS UI -->
+      <!-- IMAGE TOOLBOX -->
       <div id="imageToolBox">
         <h3>Image Tools</h3>
-        <p>Upload an image and edit it using the controls below.</p>
+        <p>Upload an image and edit it using the tools below.</p>
 
         <input type="file" id="imgInput" accept="image/*" />
 
         <canvas id="imageCanvas"></canvas>
+        <br><br>
 
-        <div class="image-buttons">
-          <button onclick="applyFilter('rotate')">Rotate 90°</button>
-          <button onclick="applyFilter('flipH')">Flip Horizontal</button>
-          <button onclick="applyFilter('flipV')">Flip Vertical</button>
-          <button onclick="applyFilter('grayscale')">Grayscale</button>
-          <button onclick="applyFilter('invert')">Invert</button>
-          <button onclick="applyFilter('blur')">Blur +</button>
-          <button onclick="applyFilter('brightness')">Brightness +</button>
-          <button onclick="applyFilter('contrast')">Contrast +</button>
-          <button onclick="resetImageFilters()">Reset</button>
-          <button onclick="downloadImage()">Download Image</button>
-        </div>
+        <button onclick="applyFilter('rotate')">Rotate 90°</button>
+        <button onclick="applyFilter('flipH')">Flip Horizontal</button>
+        <button onclick="applyFilter('flipV')">Flip Vertical</button>
+        <button onclick="applyFilter('grayscale')">Grayscale</button>
+        <button onclick="applyFilter('invert')">Invert</button>
+        <button onclick="applyFilter('blur')">Blur +</button>
+        <button onclick="applyFilter('brightness')">Brightness +</button>
+        <button onclick="applyFilter('contrast')">Contrast +</button>
+        <button onclick="resetImageFilters()">Reset</button>
+        <button onclick="downloadImage()">Download Image</button>
       </div>
+
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
