@@ -1,190 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GTTOOLS — 100+ Free Online Tools</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTTOOLS — 100+ Free Online Tools</title>
 
-    <link rel="stylesheet" href="style.css" />
+  <!-- Agar tere pas style.css hai to rehne de -->
+  <link rel="stylesheet" href="style.css" />
 
-    <style>
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 7px; }
-        ::-webkit-scrollbar-thumb { background: #45a5ff; border-radius: 10px; }
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f8ff;
+    }
 
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: #f4faff;
-        }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
 
-        /* Layout */
-        .container {
-            display: flex;
-            height: 100vh;
-        }
+    /* SIDEBAR */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      padding: 16px;
+      overflow-y: auto;
+    }
 
-        /* Sidebar */
-        .sidebar {
-            width: 260px;
-            background: #ffffff;
-            border-right: 1px solid #e0e0e0;
-            overflow-y: auto;
-            padding: 15px;
-        }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 12px;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2684ff;
-            margin-bottom: 20px;
-        }
+    .search-box {
+      margin-bottom: 12px;
+    }
 
-        .search-box input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            outline: none;
-        }
+    .search-box input {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      outline: none;
+    }
 
-        .category-bar {
-            margin: 15px 0;
-            display: flex;
-            gap: 10px;
-        }
+    .search-box input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
 
-        .cat-btn {
-            padding: 5px 12px;
-            font-size: 13px;
-            border: none;
-            border-radius: 20px;
-            background: #e8f3ff;
-            cursor: pointer;
-        }
+    .tool-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
 
-        .tool-item {
-            background: #f8fbff;
-            padding: 12px;
-            border-radius: 8px;
-            margin: 8px 0;
-            cursor: pointer;
-            border: 1px solid #e4ecf5;
-        }
+    .tool-item {
+      background: #f9fbff;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: 0.15s;
+    }
 
-        .tool-item:hover { background: #eaf4ff; }
-        .tool-item.active { background: #d8eaff; border-color: #5ba7ff; }
+    .tool-item:hover {
+      background: #e8f1ff;
+      border-color: #2563eb;
+    }
 
-        .tool-name { font-weight: 600; }
-        .tool-tag { font-size: 11px; color: #fff; padding: 2px 6px; border-radius: 4px; }
+    .tool-item.active {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
 
-        .text { background: #007bff; }
-        .pdf { background: #ff5722; }
-        .image { background: #9c27b0; }
-        .dev { background: #009688; }
+    .tool-name {
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-        /* Main Panel */
-        .main-panel {
-            flex: 1;
-            padding: 25px;
-            overflow-y: auto;
-        }
+    .tool-tags {
+      margin-top: 4px;
+    }
 
-        .selected-tool-title {
-            font-size: 22px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
+    .tool-tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      color: #ffffff;
+    }
 
-        .text-area {
-            width: 100%;
-            min-height: 130px;
-            padding: 10px;
-            border: 1px solid #d0d8e2;
-            border-radius: 8px;
-            outline: none;
-            font-size: 14px;
-        }
+    .tool-tag.text { background: #2563eb; }
+    .tool-tag.image { background: #16a34a; }
+    .tool-tag.pdf { background: #dc2626; }
+    .tool-tag.dev { background: #9333ea; }
+    .tool-tag.util { background: #d97706; }
 
-        #runTool {
-            background: #2684ff;
-            border: none;
-            padding: 10px 20px;
-            color: white;
-            margin: 10px 0;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-        }
+    /* MAIN PANEL */
+    .main-panel {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
 
-        #toolOutput {
-            width: 100%;
-            min-height: 150px;
-            border: 1px solid #d0d8e2;
-            padding: 10px;
-            border-radius: 8px;
-            outline: none;
-        }
+    .welcome-box {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    }
 
-        #resultInfo {
-            margin-top: 8px;
-            color: #007bff;
-            font-weight: 500;
-        }
+    .selected-tool-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #111827;
+    }
 
-        .welcome-box {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #e0e7ef;
-            margin-bottom: 15px;
-        }
+    .text-area {
+      width: 100%;
+      min-height: 120px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      outline: none;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
 
-    </style>
+    .text-area:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    #runTool {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #runTool:hover {
+      background: #1d4ed8;
+    }
+
+    #toolOutput {
+      width: 100%;
+      min-height: 140px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      padding: 10px;
+      outline: none;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    #resultInfo {
+      font-size: 13px;
+      color: #2563eb;
+      margin-bottom: 12px;
+    }
+
+    /* IMAGE TOOL BOX */
+    #imageToolBox {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 14px;
+      margin-top: 14px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    }
+
+    #imageCanvas {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      margin-top: 10px;
+    }
+
+    .img-btn-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .img-btn-row button {
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f3f4ff;
+      cursor: pointer;
+    }
+
+    .img-btn-row button:hover {
+      background: #e0e7ff;
+      border-color: #2563eb;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: 220px;
+      }
+      .main-panel {
+        height: calc(100vh - 220px);
+      }
+    }
+
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5f5; border-radius: 999px; }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="logo">⚡ GTTOOLS</div>
 
-    <div class="container">
+      <div class="search-box">
+        <input type="text" id="searchBar" placeholder="Search tools..." />
+      </div>
 
-        <!-- ============ SIDEBAR ============ -->
-        <div class="sidebar">
-            <div class="logo">⚡ GTTOOLS</div>
-
-            <div class="search-box">
-                <input type="text" id="searchBar" placeholder="Search tools..." />
-            </div>
-
-            <ul class="tool-list"></ul>
-        </div>
-
-        <!-- ============ MAIN PANEL ============ -->
-        <div class="main-panel">
-
-            <div class="welcome-box">
-                <h2>Welcome to GTTOOLS ⚙</h2>
-                <p>Left sidebar se koi bhi tool choose karo.</p>
-                <ul>
-                    <li>✔ 100+ high-use tools (text, image, PDF, dev utility)</li>
-                    <li>✔ Pure frontend UI + Live PDF backend</li>
-                    <li>✔ Light, fast, mobile friendly</li>
-                </ul>
-            </div>
-
-            <h2 class="selected-tool-title">Choose a tool</h2>
-
-            <textarea id="userInput" class="text-area" placeholder="Enter your text or data here..."></textarea>
-
-            <button id="runTool">Run Tool</button>
-
-            <textarea id="toolOutput" readonly></textarea>
-
-            <div id="resultInfo"></div>
-        </div>
-
+      <ul class="tool-list"></ul>
     </div>
 
-    <script src="script.js"></script>
+    <!-- MAIN PANEL -->
+    <div class="main-panel">
+      <div class="welcome-box">
+        <h2>Welcome to GTTOOLS</h2>
+        <p>Left side se koi bhi tool choose karo. Neeche text box me input daalo, phir <b>Run Tool</b> dabao.</p>
+        <ul>
+          <li>✔ 100+ Text, Dev, PDF, Utility, Image tools</li>
+          <li>✔ PDF → Word / PPT / Excel backend se (live)</li>
+          <li>✔ Image tools: upload, edit & download</li>
+        </ul>
+      </div>
+
+      <h2 class="selected-tool-title">Choose a tool</h2>
+
+      <textarea
+        id="userInput"
+        class="text-area"
+        placeholder="Enter your text / data here for the selected tool..."
+      ></textarea>
+
+      <button id="runTool">Run Tool</button>
+
+      <textarea id="toolOutput" readonly></textarea>
+
+      <div id="resultInfo"></div>
+
+      <!-- IMAGE TOOLS UI -->
+      <div id="imageToolBox" style="display:none;">
+        <h3 style="margin:0 0 8px 0;">Image Tools</h3>
+        <small>Upload image → below buttons se edit karo → Download Image se save karo.</small>
+        <br /><br />
+        <input type="file" id="imgInput" accept="image/*" />
+
+        <canvas id="imageCanvas"></canvas>
+
+        <div class="img-btn-row">
+          <button onclick="applyFilter('rotate')">Rotate 90°</button>
+          <button onclick="applyFilter('flipH')">Flip Horizontal</button>
+          <button onclick="applyFilter('flipV')">Flip Vertical</button>
+          <button onclick="applyFilter('grayscale')">Grayscale</button>
+          <button onclick="applyFilter('invert')">Invert</button>
+          <button onclick="applyFilter('blur')">Blur +</button>
+          <button onclick="applyFilter('brightness')">Brightness +</button>
+          <button onclick="applyFilter('contrast')">Contrast +</button>
+          <button onclick="resetImageFilters()">Reset</button>
+          <button onclick="downloadImage()">Download Image</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
