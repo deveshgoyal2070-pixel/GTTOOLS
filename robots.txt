@@ -1,16 +1,4 @@
 User-agent: *
 Allow: /
 
-# BLOCK unnecessary backend paths (safety)
-Disallow: /api/
-Disallow: /backend/
-Disallow: /server/
-Disallow: /private/
-Disallow: /tmp/
-Disallow: /config/
-
-# Allow all HTML tool pages
-Allow: /tools/
-
-# Sitemap
 Sitemap: https://deveshgoyal2070-pixel.github.io/gttools/sitemap.xml
