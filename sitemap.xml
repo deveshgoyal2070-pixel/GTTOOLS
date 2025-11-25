@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOMEPAGE -->
+  <!-- MAIN PAGES -->
   <url>
     <loc>https://deveshgoyal2070-pixel.github.io/gttools/</loc>
-    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/</loc>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- =============== TEXT TOOLS (36) =============== -->
+  <!-- TEXT TOOLS (36) -->
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/text-word-count.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/text-char-count.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/text-line-count.html</loc></url>
@@ -46,7 +49,7 @@
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/text-to-binary.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/binary-to-text.html</loc></url>
 
-  <!-- =============== IMAGE TOOLS (15) =============== -->
+  <!-- IMAGE TOOLS (15) -->
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/img-resize.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/img-crop.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/img-rotate.html</loc></url>
@@ -63,12 +66,12 @@
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/img-watermark.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/img-info.html</loc></url>
 
-  <!-- =============== PDF TOOLS (3) =============== -->
+  <!-- PDF TOOLS (3) -->
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/pdf-to-word.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/pdf-to-ppt.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/pdf-to-excel.html</loc></url>
 
-  <!-- =============== DEV TOOLS (16) =============== -->
+  <!-- DEV TOOLS (16) -->
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/dev-json-format.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/dev-json-minify.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/dev-json-validate.html</loc></url>
@@ -86,7 +89,7 @@
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/dev-sha256.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/dev-lorem.html</loc></url>
 
-  <!-- =============== UTILITY TOOLS (30) =============== -->
+  <!-- UTILITY TOOLS (30) -->
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-password.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-random-number.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-coin.html</loc></url>
@@ -94,8 +97,6 @@
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-age.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-date-diff.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-epoch.html</loc></url>
-  <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-stopwatch.html</loc></url>
-  <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-timer.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-unit-length.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-unit-weight.html</loc></url>
   <url><loc>https://deveshgoyal2070-pixel.github.io/gttools/tools/util-unit-temp.html</loc></url>
