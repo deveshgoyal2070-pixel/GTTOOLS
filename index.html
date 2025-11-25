@@ -1,53 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>GTTOOLS — 100+ Free Text, PDF, Image, Dev & Utility Tools</title>
+  <!-- ✅ Google Search Console Verification -->
+  <meta name="google-site-verification" content="CPJg92e7iwA5U1-s1cRBTxGltL8zz3iGafPtq-2pfGY" />
 
-  <meta name="description"
-    content="GTTOOLS offers 100+ free online tools for text editing, PDF conversion (Word, Excel, PPT), image editing, development utilities, calculators, and productivity tools. No signup needed – fast, simple, and mobile-friendly." />
+  <!-- ✅ SEO -->
+  <title>GTTOOLS — 100+ Free Online Tools (Text, PDF, Image, Dev, Utility)</title>
+  <meta name="description" content="GTTOOLS — 100+ free online tools for text editing, PDF conversion, image editing, developer utilities, calculators, and more. No login. Instant results. 100% free forever." />
+  <meta name="keywords" content="online tools, pdf to word, image editor, text tools, free tools, GTTOOLS, dev tools, SEO tools, utility tools" />
+  <meta name="author" content="GTTOOLS" />
 
-  <meta name="keywords"
-    content="word counter, pdf to word, pdf to excel, pdf to ppt, image editor online, text tools, developer tools, utility tools, free online tools, GTTOOLS" />
-
-  <meta name="robots" content="index, follow" />
-
-  <!-- OpenGraph -->
+  <!-- 🟦 Open Graph (Facebook / WhatsApp) -->
   <meta property="og:title" content="GTTOOLS — 100+ Free Online Tools" />
-  <meta property="og:description"
-    content="100+ Text, Image, PDF, Dev, Utility tools. Fast, powerful, mobile-friendly. One place for everything." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://deveshgoyal2070-pixel.github.io/gttools/favicon.png" />
+  <meta property="og:description" content="Use 100+ free tools for PDF, Text, Image, Dev, Utilities. Fast & Easy." />
+  <meta property="og:image" content="https://deveshgoyal2070-pixel.github.io/gttools/banner.png" />
   <meta property="og:url" content="https://deveshgoyal2070-pixel.github.io/gttools/" />
+  <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
+  <!-- 🟦 Twitter SEO -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GTTOOLS — 100+ Free Online Tools" />
+  <meta name="twitter:description" content="Free tools for PDF, Text, Image, Dev & more." />
+  <meta name="twitter:image" content="https://deveshgoyal2070-pixel.github.io/gttools/banner.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- Stylesheet -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "GTTOOLS",
-    "url": "https://deveshgoyal2070-pixel.github.io/gttools/",
-    "author": { "@type": "Person", "name": "Devesh Goyal" },
-    "applicationCategory": "UtilityApplication",
-    "description": "100+ online tools including PDF converters, text tools, image editors, developer utilities and productivity calculators.",
-    "operatingSystem": "All"
-  }
-  </script>
-
   <style>
-    /* (SAME CSS YOU USED BEFORE – KEEP YOUR EXISTING style.css UNCHANGED) */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f4f8ff;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      padding: 16px;
+      overflow-y: auto;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .tool-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .tool-item {
+      background: #f9fbff;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      padding: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: 0.2s ease-out;
+    }
+
+    .tool-item:hover {
+      transform: translateX(5px);
+      background: #eef4ff;
+      border-color: #2563eb;
+    }
+
+    .tool-item.active {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    /* MAIN PANEL */
+    .main-panel {
+      flex: 1;
+      padding: 22px;
+      overflow-y: auto;
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.9s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(26px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow {
+      animation: glowPulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 0 rgba(37,99,235,0.0); }
+      50% { box-shadow: 0 0 14px rgba(37,99,235,0.45); }
+      100% { box-shadow: 0 0 0 rgba(37,99,235,0.0); }
+    }
+
+    .welcome-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 22px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 20px;
+    }
+
+    .selected-tool-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .text-area, #toolOutput {
+      width: 100%;
+      min-height: 130px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    #runTool {
+      padding: 10px 20px;
+      background: #2563eb;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #runTool:hover {
+      background: #1e4fcc;
+    }
+
+    /* IMAGE TOOLBOX */
+    #imageToolBox {
+      display: none;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 14px;
+      margin-top: 14px;
+    }
+
+    #imageCanvas {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -55,7 +188,7 @@
 
   <div class="container">
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="logo">⚡ GTTOOLS</div>
 
@@ -66,29 +199,31 @@
       <ul class="tool-list"></ul>
     </div>
 
-    <!-- Main Panel -->
+    <!-- MAIN PANEL -->
     <div class="main-panel">
-      <div class="welcome-box fade-in glow">
 
-        <h1>Welcome to GTTOOLS — Free Online Tools Hub (100+ Tools)</h1>
+      <!-- ⭐ WELCOME BOX (Now Visible!) -->
+      <div class="welcome-box fade-in glow">
+        <h2>Welcome to GTTOOLS — Your All-in-One Online Tools Hub</h2>
 
         <p>
-          GTTOOLS brings you 100+ powerful, super-fast online tools for creators, developers,
-          students and businesses. Everything runs directly in your browser — no signup, no ads (optional), no limits.
+          GTTOOLS brings you 100+ free online tools for creators, developers, students,
+          freelancers & businesses.  
+          No login. No install. Instant browser-based tools.
         </p>
 
-        <h2>Popular Categories</h2>
-
+        <h3>Why GTTOOLS?</h3>
         <ul>
-          <li><b>Text Tools:</b> Word Counter, Remove Duplicates, Case Converter</li>
-          <li><b>PDF Tools:</b> PDF to Word, PPT, Excel (live backend)</li>
-          <li><b>Image Tools:</b> Resize, Rotate, Convert, Filters</li>
-          <li><b>Developer Tools:</b> JSON Formatter, Base64, Regex Tester</li>
-          <li><b>Utility Tools:</b> Age Calculator, BMI, Timer, Password Generator</li>
+          <li>🔥 100+ fast & lightweight productivity tools</li>
+          <li>📄 PDF Converters (Word, Excel, PPT)</li>
+          <li>🖼 Image Editor (filters, rotate, crop, brightness)</li>
+          <li>👨‍💻 Developer Tools (JSON, Base64, Minify)</li>
+          <li>🧮 Utility Tools (Age, BMI, EMI, Timer)</li>
+          <li>📱 Fully responsive — works on mobile</li>
+          <li>🆓 100% Free Forever</li>
         </ul>
 
-        <p><b>Select any tool from the left menu and start using instantly!</b></p>
-
+        <p><b>Choose any tool from the left to get started.</b></p>
       </div>
 
       <h2 class="selected-tool-title">Choose a tool</h2>
@@ -104,11 +239,14 @@
       <!-- IMAGE TOOLBOX -->
       <div id="imageToolBox">
         <h3>Image Tools</h3>
-        <p>Upload an image and edit it using the filters.</p>
+        <p>Upload an image and edit it using the filters below.</p>
+
         <input type="file" id="imgInput" accept="image/*" />
+
         <canvas id="imageCanvas"></canvas>
 
         <br><br>
+
         <button onclick="applyFilter('rotate')">Rotate 90°</button>
         <button onclick="applyFilter('flipH')">Flip Horizontal</button>
         <button onclick="applyFilter('flipV')">Flip Vertical</button>
@@ -118,7 +256,7 @@
         <button onclick="applyFilter('brightness')">Brightness +</button>
         <button onclick="applyFilter('contrast')">Contrast +</button>
         <button onclick="resetImageFilters()">Reset</button>
-        <button onclick="downloadImage()">Download</button>
+        <button onclick="downloadImage()">Download Image</button>
       </div>
 
     </div>
@@ -126,5 +264,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
