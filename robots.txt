@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deveshgoyal2070-pixel.github.io/gttools/sitemap_index.xml
+Sitemap: https://deveshgoyal2070-pixel.github.io/gttools/sitemap_2025_11_26.xml
