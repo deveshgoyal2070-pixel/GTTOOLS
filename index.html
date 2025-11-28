@@ -7,8 +7,8 @@
   <!-- Google Verification -->
   <meta name="google-site-verification" content="CPJg92e7iwA5U1-s1cRBTxGltL8zz3iGafPtq-2pfGY" />
 
-  <title>GTTOOLS — 100+ Free Online Tools</title>
-  <meta name="description" content="GTTOOLS — 100+ free online tools." />
+  <title>GTTOOLS — 100+ Free Online Tools (Text, PDF, Image, Dev, Utility)</title>
+  <meta name="description" content="GTTOOLS — 100+ free online tools for text editing, PDF conversion, image editing, developer utilities, calculators, and more. No login. Instant results. 100% free forever." />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -19,13 +19,7 @@
       font-family: "Poppins", sans-serif;
       background: #f4f8ff;
     }
-    .container {
-      display: flex;
-      min-height: 100vh;
-      width: 100%;
-    }
-
-    /* SIDEBAR */
+    .container { display: flex; height: 100vh; }
     .sidebar {
       width: 260px;
       background: #ffffff;
@@ -33,9 +27,7 @@
       padding: 16px;
       overflow-y: auto;
     }
-
     .logo { font-size: 24px; font-weight: 700; color: #2563eb; margin-bottom: 15px; }
-
     .search-box input {
       width: 100%;
       padding: 9px 10px;
@@ -65,32 +57,34 @@
       border-color: #2563eb;
     }
 
-    /* ⭐ MAIN PANEL FIX (THE REAL FIX) */
     .main-panel {
       flex: 1;
       padding: 22px;
       overflow-y: auto;
-      display: block !important;  /* FIXES THE INVISIBLE BOX ISSUE */
-      position: relative;
     }
 
-    /* WELCOME BOX */
-    #welcomeBox {
-      display: block !important;  /* FORCE VISIBLE */
-      position: relative;
-      z-index: 10 !important;
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.9s ease-out forwards; }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(26px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow { animation: glowPulse 2.8s ease-in-out infinite; }
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 0 rgba(37,99,235,0); }
+      50% { box-shadow: 0 0 14px rgba(37,99,235,0.45); }
+      100% { box-shadow: 0 0 0 rgba(37,99,235,0); }
+    }
+
+    .welcome-box {
       background: #ffffff;
-      padding: 22px;
       border-radius: 14px;
+      padding: 22px;
       border: 1px solid #e5e7eb;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
-    .selected-tool-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+    .selected-tool-title { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
 
     .text-area, #toolOutput {
       width: 100%;
@@ -100,7 +94,6 @@
       border: 1px solid #d1d5db;
       margin-bottom: 10px;
       font-size: 14px;
-      background: #fff;
     }
 
     #runTool {
@@ -122,7 +115,6 @@
       padding: 14px;
       margin-top: 14px;
     }
-
     #imageCanvas {
       max-width: 100%;
       border-radius: 10px;
@@ -148,12 +140,9 @@
     <!-- MAIN PANEL -->
     <div class="main-panel">
 
-      <!-- ⭐ ALWAYS-VISIBLE WELCOME BOX ✔ FIXED -->
-      <div id="welcomeBox">
+      <div id="welcomeBox" class="welcome-box fade-in glow">
         <h2>Welcome to GTTOOLS — Your All-in-One Online Tools Hub</h2>
-
-        <p>GTTOOLS brings you 100+ free online tools for creators, developers, students,
-        freelancers & businesses.</p>
+        <p>GTTOOLS brings you 100+ free online tools…</p>
 
         <h3>Why GTTOOLS?</h3>
         <ul>
@@ -162,16 +151,14 @@
           <li>🖼 Image Editor</li>
           <li>👨‍💻 Developer Tools</li>
           <li>🧮 Utility Tools</li>
-          <li>📱 Fully responsive</li>
-          <li>🆓 Free forever</li>
+          <li>📱 Full Responsive</li>
+          <li>🆓 Free Forever</li>
         </ul>
 
         <p><b>Choose any tool from the left to get started.</b></p>
       </div>
 
-      <!-- TOOL PANEL -->
       <h2 class="selected-tool-title">Choose a tool</h2>
-
       <textarea id="userInput" class="text-area" placeholder="Enter your text…"></textarea>
       <button id="runTool">Run Tool</button>
       <textarea id="toolOutput" readonly></textarea>
@@ -183,7 +170,6 @@
         <input type="file" id="imgInput" accept="image/*" />
         <canvas id="imageCanvas"></canvas>
         <br><br>
-
         <button onclick="applyFilter('rotate')">Rotate 90°</button>
         <button onclick="applyFilter('flipH')">Flip H</button>
         <button onclick="applyFilter('flipV')">Flip V</button>
@@ -198,14 +184,21 @@
 
     </div>
   </div>
+
+
   <!-- FOOTER START -->
   <div style="text-align:center; margin-top:20px; font-size:14px; color:#666;">
-  Listed on <a href="https://www.toolpilot.ai" target="_blank" style="color:#2563eb; text-decoration:none;">ToolPilot.ai</a>
-</div>
-<!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com/" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=21460054&style=0025&nbdigits=6&type=page&initCount=0" title="Free Tools" Alt="Free Tools"   border="0" /></a>
-   <!-- FOOTER END -->
+    Listed on <a href="https://www.toolpilot.ai" target="_blank" style="color:#2563eb; text-decoration:none;">ToolPilot.ai</a>
+  </div>
+
+  <div style="text-align:center; margin-top:10px;">
+    Visitors:
+    <img src="https://hitwebcounter.com/counter/counter.php?page=21460054&style=0025&nbdigits=6&type=page&initCount=0" 
+         title="Free Tools" alt="Free Tools" border="0" />
+  </div>
+  <!-- FOOTER END -->
+
+
   <script src="script.js"></script>
 </body>
 </html>
