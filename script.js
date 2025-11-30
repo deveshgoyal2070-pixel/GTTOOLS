@@ -45,7 +45,7 @@ const tools = [
   { id: "text-to-binary", name: "Text → Binary", category: "text" },
   { id: "binary-to-text", name: "Binary → Text", category: "text" },
 
-  // ===== IMAGE TOOLS (15, use common UI) =====
+  // ===== IMAGE TOOLS (15) =====
   { id: "img-resize", name: "Image Editor: Resize / Transform", category: "image" },
   { id: "img-crop", name: "Image Editor: Crop (basic)", category: "image" },
   { id: "img-rotate", name: "Image Editor: Rotate", category: "image" },
@@ -62,7 +62,7 @@ const tools = [
   { id: "img-watermark", name: "Watermark (use text overlay soon)", category: "image" },
   { id: "img-info", name: "Image Info (size)", category: "image" },
 
-  // ===== PDF TOOLS (3 – LIVE BACKEND) =====
+  // ===== PDF TOOLS (3) =====
   { id: "pdf-to-word", name: "PDF → Word (DOCX)", category: "pdf" },
   { id: "pdf-to-ppt", name: "PDF → PPTX", category: "pdf" },
   { id: "pdf-to-excel", name: "PDF → Excel (XLSX)", category: "pdf" },
@@ -128,8 +128,8 @@ const outputEl = document.getElementById("toolOutput");
 const infoEl = document.getElementById("resultInfo");
 const runBtn = document.getElementById("runTool");
 const imageToolBox = document.getElementById("imageToolBox");
-const welcomeBox = document.getElementById("welcomeBox");
 
+// Welcome Box removed from here as it is now a modal
 let currentTool = null;
 
 // ---------- SIDEBAR RENDER ----------
@@ -159,11 +159,6 @@ function renderTools(list) {
 function selectTool(id) {
   currentTool = tools.find((t) => t.id === id);
   if (!currentTool) return;
-
-  // hide welcome box on first tool select
-  if (welcomeBox) {
-    welcomeBox.style.display = "none";
-  }
 
   document.querySelectorAll(".tool-item").forEach((li) => {
     li.classList.toggle("active", li.dataset.id === id);
@@ -1277,3 +1272,30 @@ function handleImageTool(id, text) {
   let info = `Tool: ${id}`;
   return { result, info };
 }
+
+
+// ====================================
+// NEW MODAL POPUP LOGIC ADDED BELOW
+// ====================================
+
+const welcomeOverlay = document.getElementById("welcomeOverlay");
+const closePopupBtn = document.getElementById("closePopupBtn");
+
+if (closePopupBtn && welcomeOverlay) {
+  closePopupBtn.addEventListener("click", () => {
+    welcomeOverlay.style.display = "none";
+    
+    // Optional: Agar tum chahte ho ki user ko ye popup 
+    // agli baar refresh karne par NA dikhe, to ye line uncomment kar dena:
+    // localStorage.setItem("gttools_welcome_seen", "true");
+  });
+}
+
+// (Optional) Check local storage on load if you want to remember user choice
+/*
+window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("gttools_welcome_seen")) {
+        welcomeOverlay.style.display = "none";
+    }
+});
+*/
