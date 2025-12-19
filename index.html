@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>gtttools — Free 200 tools (100 Normal + 100 AI)</title>
+  <meta name="description" content="gtttools: Free in-browser tools — text, image, dev, SEO, calculators, and AI-style helpers. No login, no cost." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#06b6d4}
+    body{font-family:Inter,system-ui,Arial;margin:0;background:#f7fafc;color:#0f1724}
+    .wrap{max-width:1100px;margin:24px auto;padding:16px}
+    header{display:flex;gap:16px;align-items:center}
+    h1{margin:0;font-size:20px}
+    .search{margin-top:16px}
+    input[type="search"]{width:100%;padding:12px;border-radius:8px;border:1px solid #e2e8f0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:18px}
+    .card{background:#fff;border-radius:8px;padding:12px;border:1px solid #e6eef6}
+    .cat-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .cat{padding:6px 10px;background:#eef2ff;border-radius:999px;font-size:13px;cursor:pointer}
+    .tools-list{margin-top:16px}
+    .tool-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed #eef2f6}
+    .tool-name{font-weight:600}
+    .tool-cat{font-size:12px;color:#6b7280}
+    footer{margin-top:28px;color:#6b7280;font-size:13px}
+    .count{color:#475569}
+    a.tool-link { color: #0ea5a4; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>gtttools</h1>
+        <div style="color:#64748b">Free 200 tools — 100 Normal + 100 AI-style helpers (no paid API)</div>
+      </div>
+    </header>
+
+    <div class="search">
+      <input id="q" type="search" placeholder="Search tools, e.g. 'image resize' or 'title generator'" />
+    </div>
+
+    <div class="cat-list" id="categories"></div>
+
+    <div class="card tools-list">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div><strong>Tools</strong> <span class="count" id="count"></span></div>
+        <div style="font-size:13px;color:#64748b">Click a tool to open its page (pages will be added).</div>
+      </div>
+
+      <div id="tools" style="margin-top:8px"></div>
+    </div>
+
+    <footer>
+      Built for GitHub Pages • MIT License • Use responsibly
+    </footer>
+  </div>
+
+  <script>
+  // Fetch tools data from data/tools.json
+  async function loadTools() {
+    try {
+      const res = await fetch('data/tools.json');
+      if(!res.ok) throw new Error('Failed to fetch tools.json');
+      const tools = await res.json();
+      init(tools);
+    } catch (e) {
+      console.error('Could not load tools.json:', e);
+      document.getElementById('tools').innerHTML = '<div style="color:#ef4444;padding:12px;border-radius:8px;background:#fff3f2">Error loading tools.json. Make sure <code>data/tools.json</code> is present.</div>';
+      document.getElementById('count').textContent = '';
+    }
+  }
+
+  function init(tools) {
+    const categories = [...new Set(tools.map(t=>t.category))].sort();
+    const catContainer = document.getElementById('categories');
+    categories.forEach(c=>{
+      const b=document.createElement('div');b.className='cat';b.textContent=c;b.onclick=()=>{document.getElementById('q').value=c; render(tools);};catContainer.appendChild(b);
+    });
+
+    const toolsDiv = document.getElementById('tools');
+    const countSpan = document.getElementById('count');
+
+    function slugify(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');}
+
+    function render(currentTools){
+      const q=document.getElementById('q').value.trim().toLowerCase();
+      const filtered = currentTools.filter(t=>{
+        if(!q) return true;
+        return t.name.toLowerCase().includes(q) || t.category.toLowerCase().includes(q) || (t.desc||'').toLowerCase().includes(q);
+      });
+      countSpan.textContent = `${filtered.length} / ${currentTools.length}`;
+      toolsDiv.innerHTML='';
+      filtered.forEach(t=>{
+        const row=document.createElement('div');row.className='tool-row';
+        const left=document.createElement('div');
+        const a=document.createElement('a');
+        a.href=`tools/${t.category.toLowerCase()}/${t.slug}.html`;
+        a.textContent=t.name; a.className='tool-name tool-link';
+        left.appendChild(a);
+        const sm=document.createElement('div');sm.className='tool-cat';sm.textContent=t.category + ' • ' + t.desc; left.appendChild(sm);
+        row.appendChild(left);
+        const right=document.createElement('div');
+        const open=document.createElement('a');open.href=`tools/${t.category.toLowerCase()}/${t.slug}.html`;open.textContent='Open';open.style.fontSize='13px';open.className='tool-link';
+        right.appendChild(open);
+        row.appendChild(right);
+        toolsDiv.appendChild(row);
+      });
+    }
+
+    document.getElementById('q').addEventListener('input', ()=>render(tools));
+    render(tools);
+  }
+
+  loadTools();
+  </script>
+</body>
+</html>
