@@ -1,46 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Case Converter | Free Online Tool</title>
-  <meta name="description" content="Upper / lower / sentence case Free online tool. No login required." />
+  <title>Case Converter – Uppercase, Lowercase, Title Case | gttools</title>
+  <meta name="description" content="Free Case Converter tool. Convert text to uppercase, lowercase, title case and sentence case online." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/text/case-converter.html" />
+
   <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
+    body{font-family:system-ui,Arial;background:#f8fafc;color:#0f172a;margin:0}
+    .container{max-width:900px;margin:30px auto;padding:20px}
+    textarea{width:100%;min-height:220px;padding:15px;font-size:16px;border-radius:8px;border:1px solid #cbd5f5}
+    .buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+    button{padding:10px 16px;border:none;border-radius:6px;cursor:pointer}
+    .primary{background:#0ea5a4;color:#fff}
+    .secondary{background:#e2e8f0}
     a{color:#0ea5a4;text-decoration:none}
   </style>
 </head>
+
 <body>
-  <div class="wrap">
+  <div class="container">
     <a href="/">← Back to all tools</a>
 
     <h1>Case Converter</h1>
-    <p class="muted">Upper / lower / sentence case</p>
+    <p>Convert text to Uppercase, Lowercase, Title Case or Sentence Case instantly.</p>
 
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
+    <textarea id="text"></textarea>
 
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        Case Converter is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
+    <div class="buttons">
+      <button class="primary" onclick="toUpper()">UPPERCASE</button>
+      <button class="secondary" onclick="toLower()">lowercase</button>
+      <button class="secondary" onclick="toTitle()">Title Case</button>
+      <button class="secondary" onclick="toSentence()">Sentence case</button>
+      <button class="secondary" onclick="copyText()">Copy</button>
+      <button class="secondary" onclick="clearText()">Clear</button>
     </div>
   </div>
+
+  <script>
+    const textarea = document.getElementById("text");
+
+    function toUpper() {
+      textarea.value = textarea.value.toUpperCase();
+    }
+
+    function toLower() {
+      textarea.value = textarea.value.toLowerCase();
+    }
+
+    function toTitle() {
+      textarea.value = textarea.value
+        .toLowerCase()
+        .replace(/\b\w/g, char => char.toUpperCase());
+    }
+
+    function toSentence() {
+      textarea.value = textarea.value
+        .toLowerCase()
+        .replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
+    }
+
+    function copyText() {
+      textarea.select();
+      document.execCommand("copy");
+      alert("Text copied");
+    }
+
+    function clearText() {
+      textarea.value = "";
+    }
+  </script>
 </body>
 </html>
