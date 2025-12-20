@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 1,
+    "name": "Word Counter",
+    "category": "Text",
+    "slug": "word-counter",
+    "desc": "Count words in text"
+  },
+  {
+    "id": 2,
+    "name": "Character Counter",
+    "category": "Text",
+    "slug": "character-counter",
+    "desc": "Count characters"
+  },
+  {
+    "id": 3,
+    "name": "Case Converter",
+    "category": "Text",
+    "slug": "case-converter",
+    "desc": "Upper / lower / sentence case"
+  },
+  {
+    "id": 4,
+    "name": "Remove Line Breaks",
+    "category": "Text",
+    "slug": "remove-line-breaks",
+    "desc": "Remove newlines"
+  },
+  {
+    "id": 5,
+    "name": "Text Sorter",
+    "category": "Text",
+    "slug": "text-sorter",
+    "desc": "Sort lines alphabetically"
+  },
+  {
+    "id": 6,
+    "name": "Duplicate Line Remover",
+    "category": "Text",
+    "slug": "duplicate-line-remover",
+    "desc": "Remove duplicate lines"
+  },
+  {
+    "id": 7,
+    "name": "Text Repeater",
+    "category": "Text",
+    "slug": "text-repeater",
+    "desc": "Repeat text multiple times"
+  },
+  {
+    "id": 8,
+    "name": "Slug Generator",
+    "category": "Text",
+    "slug": "slug-generator",
+    "desc": "Create URL slugs"
+  },
+  {
+    "id": 9,
+    "name": "Random Text Generator",
+    "category": "Text",
+    "slug": "random-text-generator",
+    "desc": "Generate placeholder text"
+  },
+  {
+    "id": 10,
+    "name": "Find & Replace",
+    "category": "Text",
+    "slug": "find-replace",
+    "desc": "Find and replace in text"
+  },
+  {
+    "id": 11,
+    "name": "Trim Spaces",
+    "category": "Text",
+    "slug": "trim-spaces",
+    "desc": "Trim extra spaces"
+  },
+  {
+    "id": 12,
+    "name": "Line Numberer",
+    "category": "Text",
+    "slug": "line-numberer",
+    "desc": "Add line numbers"
+  },
+  {
+    "id": 13,
+    "name": "Reverse Text",
+    "category": "Text",
+    "slug": "reverse-text",
+    "desc": "Reverse the text"
+  },
+  {
+    "id": 14,
+    "name": "Palindrome Checker",
+    "category": "Text",
+    "slug": "palindrome-checker",
+    "desc": "Check palindromes"
+  },
+  {
+    "id": 15,
+    "name": "Anagram Checker",
+    "category": "Text",
+    "slug": "anagram-checker",
+    "desc": "Check anagrams"
+  },
+  {
+    "id": 16,
+    "name": "Markdown to HTML",
+    "category": "Text",
+    "slug": "markdown-to-html",
+    "desc": "Convert markdown to HTML"
+  },
+  {
+    "id": 17,
+    "name": "HTML to Markdown",
+    "category": "Text",
+    "slug": "html-to-markdown",
+    "desc": "Convert HTML to markdown"
+  },
+  {
+    "id": 18,
+    "name": "Text Readability Checker",
+    "category": "Text",
+    "slug": "readability-checker",
+    "desc": "Readability score"
+  },
+  {
+    "id": 19,
+    "name": "Word Frequency Counter",
+    "category": "Text",
+    "slug": "word-frequency",
+    "desc": "Count word frequency"
+  },
+  {
+    "id": 20,
+    "name": "Sentence Case Converter",
+    "category": "Text",
+    "slug": "sentence-case",
+    "desc": "Convert to sentence case"
+  },
+  {
+    "id": 21,
+    "name": "Image Preview",
+    "category": "Image",
+    "slug": "image-preview",
+    "desc": "Preview images in browser"
+  },
+  {
+    "id": 22,
+    "name": "Image Resizer",
+    "category": "Image",
+    "slug": "image-resizer",
+    "desc": "Resize images using canvas"
+  },
+  {
+    "id": 23,
+    "name": "Image Cropper",
+    "category": "Image",
+    "slug": "image-cropper",
+    "desc": "Crop images client-side"
+  },
+  {
+    "id": 24,
+    "name": "Image Rotate",
+    "category": "Image",
+    "slug": "image-rotate",
+    "desc": "Rotate images"
+  },
+  {
+    "id": 25,
+    "name": "Image to Base64",
+    "category": "Image",
+    "slug": "image-to-base64",
+    "desc": "Convert image to base64"
+  },
+  {
+    "id": 26,
+    "name": "Base64 to Image",
+    "category": "Image",
+    "slug": "base64-to-image",
+    "desc": "Convert base64 to image"
+  },
+  {
+    "id": 27,
+    "name": "Image Metadata Viewer",
+    "category": "Image",
+    "slug": "image-metadata",
+    "desc": "View EXIF metadata"
+  },
+  {
+    "id": 28,
+    "name": "Image Downloader",
+    "category": "Image",
+    "slug": "image-downloader",
+    "desc": "Download image from URL"
+  },
+  {
+    "id": 29,
+    "name": "Image Dimension Checker",
+    "category": "Image",
+    "slug": "image-dimensions",
+    "desc": "Check image size"
+  },
+  {
+    "id": 30,
+    "name": "Image Orientation Fixer",
+    "category": "Image",
+    "slug": "image-orientation-fix",
+    "desc": "Fix orientation"
+  },
+  {
+    "id": 31,
+    "name": "Image Canvas Filter",
+    "category": "Image",
+    "slug": "image-filter",
+    "desc": "Apply simple filters"
+  },
+  {
+    "id": 32,
+    "name": "Image Watermarker",
+    "category": "Image",
+    "slug": "image-watermarker",
+    "desc": "Add watermark"
+  },
+  {
+    "id": 33,
+    "name": "Image Merge",
+    "category": "Image",
+    "slug": "image-merge",
+    "desc": "Merge multiple images"
+  },
+  {
+    "id": 34,
+    "name": "Image Splitter",
+    "category": "Image",
+    "slug": "image-splitter",
+    "desc": "Split image into parts"
+  },
+  {
+    "id": 35,
+    "name": "Image Format Converter",
+    "category": "Image",
+    "slug": "image-format-converter",
+    "desc": "PNG/JPG/WebP convert"
+  },
+  {
+    "id": 36,
+    "name": "Meta Tag Generator",
+    "category": "SEO",
+    "slug": "meta-tag-generator",
+    "desc": "Generate title & meta"
+  },
+  {
+    "id": 37,
+    "name": "Robots.txt Generator",
+    "category": "SEO",
+    "slug": "robots-generator",
+    "desc": "Create robots.txt"
+  },
+  {
+    "id": 38,
+    "name": "Sitemap Generator",
+    "category": "SEO",
+    "slug": "sitemap-generator",
+    "desc": "Create sitemap XML"
+  },
+  {
+    "id": 39,
+    "name": "Keyword Density Checker",
+    "category": "SEO",
+    "slug": "keyword-density",
+    "desc": "Count keyword density"
+  },
+  {
+    "id": 40,
+    "name": "URL Encoder/Decoder",
+    "category": "SEO",
+    "slug": "url-encoder",
+    "desc": "Encode or decode URLs"
+  },
+  {
+    "id": 41,
+    "name": "SEO Title Analyzer",
+    "category": "SEO",
+    "slug": "seo-title-analyzer",
+    "desc": "Analyze title length & words"
+  },
+  {
+    "id": 42,
+    "name": "SERP Preview Tool",
+    "category": "SEO",
+    "slug": "serp-preview",
+    "desc": "Preview search engine snippet"
+  },
+  {
+    "id": 43,
+    "name": "Canonical Tag Generator",
+    "category": "SEO",
+    "slug": "canonical-generator",
+    "desc": "Create canonical tags"
+  },
+  {
+    "id": 44,
+    "name": "OG Tag Generator",
+    "category": "SEO",
+    "slug": "og-generator",
+    "desc": "Open Graph meta tags"
+  },
+  {
+    "id": 45,
+    "name": "HTACCESS Redirect Generator",
+    "category": "SEO",
+    "slug": "htaccess-redirect",
+    "desc": "Rules for redirects"
+  },
+  {
+    "id": 46,
+    "name": "Broken Link Checker (client)",
+    "category": "SEO",
+    "slug": "broken-link-checker",
+    "desc": "Find broken links (limited)"
+  },
+  {
+    "id": 47,
+    "name": "Structured Data Snippet",
+    "category": "SEO",
+    "slug": "structured-data",
+    "desc": "Generate JSON-LD snippets"
+  },
+  {
+    "id": 48,
+    "name": "H1/H2 Checker",
+    "category": "SEO",
+    "slug": "h1-h2-checker",
+    "desc": "Check headings"
+  },
+  {
+    "id": 49,
+    "name": "Page Size Checker",
+    "category": "SEO",
+    "slug": "page-size-checker",
+    "desc": "Estimate page size"
+  },
+  {
+    "id": 50,
+    "name": "Link Previewer",
+    "category": "SEO",
+    "slug": "link-previewer",
+    "desc": "Preview link metadata"
+  },
+  {
+    "id": 51,
+    "name": "HTML Minifier",
+    "category": "Dev",
+    "slug": "html-minifier",
+    "desc": "Minify HTML"
+  },
+  {
+    "id": 52,
+    "name": "CSS Minifier",
+    "category": "Dev",
+    "slug": "css-minifier",
+    "desc": "Minify CSS"
+  },
+  {
+    "id": 53,
+    "name": "JS Minifier",
+    "category": "Dev",
+    "slug": "js-minifier",
+    "desc": "Minify JS"
+  },
+  {
+    "id": 54,
+    "name": "JSON Formatter",
+    "category": "Dev",
+    "slug": "json-formatter",
+    "desc": "Pretty-print JSON"
+  },
+  {
+    "id": 55,
+    "name": "JSON Validator",
+    "category": "Dev",
+    "slug": "json-validator",
+    "desc": "Validate JSON"
+  },
+  {
+    "id": 56,
+    "name": "Base64 Encoder",
+    "category": "Dev",
+    "slug": "base64-encoder",
+    "desc": "Encode text to base64"
+  },
+  {
+    "id": 57,
+    "name": "Base64 Decoder",
+    "category": "Dev",
+    "slug": "base64-decoder",
+    "desc": "Decode base64 to text"
+  },
+  {
+    "id": 58,
+    "name": "UUIDv4 Generator",
+    "category": "Dev",
+    "slug": "uuidv4-generator",
+    "desc": "Generate UUIDv4"
+  },
+  {
+    "id": 59,
+    "name": "Timestamp Converter",
+    "category": "Dev",
+    "slug": "timestamp-converter",
+    "desc": "Unix timestamp ↔ date"
+  },
+  {
+    "id": 60,
+    "name": "Regex Tester",
+    "category": "Dev",
+    "slug": "regex-tester",
+    "desc": "Test regular expressions"
+  },
+  {
+    "id": 61,
+    "name": "CSS Prefixer (sim)",
+    "category": "Dev",
+    "slug": "css-prefixer",
+    "desc": "Add vendor prefixes (basic)"
+  },
+  {
+    "id": 62,
+    "name": "JS Beautifier",
+    "category": "Dev",
+    "slug": "js-beautifier",
+    "desc": "Format JS code"
+  },
+  {
+    "id": 63,
+    "name": "SQL Formatter (basic)",
+    "category": "Dev",
+    "slug": "sql-formatter",
+    "desc": "Format SQL queries"
+  },
+  {
+    "id": 64,
+    "name": "CSV to JSON",
+    "category": "Dev",
+    "slug": "csv-to-json",
+    "desc": "Convert CSV to JSON"
+  },
+  {
+    "id": 65,
+    "name": "JSON to CSV",
+    "category": "Dev",
+    "slug": "json-to-csv",
+    "desc": "Convert JSON array to CSV"
+  },
+  {
+    "id": 66,
+    "name": "Percentage Calculator",
+    "category": "Calculator",
+    "slug": "percentage-calculator",
+    "desc": "Calculate percentages"
+  },
+  {
+    "id": 67,
+    "name": "GST Calculator (India)",
+    "category": "Calculator",
+    "slug": "gst-calculator",
+    "desc": "GST inclusive/exclusive"
+  },
+  {
+    "id": 68,
+    "name": "EMI Calculator",
+    "category": "Calculator",
+    "slug": "emi-calculator",
+    "desc": "EMI for loans"
+  },
+  {
+    "id": 69,
+    "name": "Age Calculator",
+    "category": "Calculator",
+    "slug": "age-calculator",
+    "desc": "Calculate age from DOB"
+  },
+  {
+    "id": 70,
+    "name": "BMI Calculator",
+    "category": "Calculator",
+    "slug": "bmi-calculator",
+    "desc": "Body Mass Index"
+  },
+  {
+    "id": 71,
+    "name": "Discount Calculator",
+    "category": "Calculator",
+    "slug": "discount-calculator",
+    "desc": "Price after discount"
+  },
+  {
+    "id": 72,
+    "name": "Profit/Loss Calculator",
+    "category": "Calculator",
+    "slug": "profit-loss-calculator",
+    "desc": "Profit or loss computation"
+  },
+  {
+    "id": 73,
+    "name": "Simple Interest Calculator",
+    "category": "Calculator",
+    "slug": "simple-interest",
+    "desc": "Simple interest"
+  },
+  {
+    "id": 74,
+    "name": "Compound Interest Calculator",
+    "category": "Calculator",
+    "slug": "compound-interest",
+    "desc": "Compound interest"
+  },
+  {
+    "id": 75,
+    "name": "Loan Calculator",
+    "category": "Calculator",
+    "slug": "loan-calculator",
+    "desc": "Loan repayment calculator"
+  },
+  {
+    "id": 76,
+    "name": "Password Generator",
+    "category": "Utility",
+    "slug": "password-generator",
+    "desc": "Generate secure passwords"
+  },
+  {
+    "id": 77,
+    "name": "Password Strength Checker",
+    "category": "Utility",
+    "slug": "password-strength",
+    "desc": "Check password strength"
+  },
+  {
+    "id": 78,
+    "name": "QR Code Generator (data URL)",
+    "category": "Utility",
+    "slug": "qr-generator",
+    "desc": "Generate QR code image"
+  },
+  {
+    "id": 79,
+    "name": "URL Shortener (client-side)",
+    "category": "Utility",
+    "slug": "url-shortener",
+    "desc": "Client-side short link (data URL)"
+  },
+  {
+    "id": 80,
+    "name": "Random Number Generator",
+    "category": "Utility",
+    "slug": "random-number",
+    "desc": "Generate random numbers"
+  },
+  {
+    "id": 81,
+    "name": "Color Picker",
+    "category": "Utility",
+    "slug": "color-picker",
+    "desc": "Pick colors and copy HEX"
+  },
+  {
+    "id": 82,
+    "name": "HEX to RGB",
+    "category": "Utility",
+    "slug": "hex-to-rgb",
+    "desc": "Convert HEX to RGB"
+  },
+  {
+    "id": 83,
+    "name": "RGB to HEX",
+    "category": "Utility",
+    "slug": "rgb-to-hex",
+    "desc": "Convert RGB to HEX"
+  },
+  {
+    "id": 84,
+    "name": "Time Zone Converter (basic)",
+    "category": "Utility",
+    "slug": "timezone-converter",
+    "desc": "Convert between time zones"
+  },
+  {
+    "id": 85,
+    "name": "Countdown Timer",
+    "category": "Utility",
+    "slug": "countdown-timer",
+    "desc": "Create a countdown"
+  },
+  {
+    "id": 86,
+    "name": "Unit Converter (length)",
+    "category": "Utility",
+    "slug": "unit-converter-length",
+    "desc": "Convert length units"
+  },
+  {
+    "id": 87,
+    "name": "Unit Converter (weight)",
+    "category": "Utility",
+    "slug": "unit-converter-weight",
+    "desc": "Convert weight units"
+  },
+  {
+    "id": 88,
+    "name": "Clipboard Helper",
+    "category": "Utility",
+    "slug": "clipboard-helper",
+    "desc": "Copy/paste helpers"
+  },
+  {
+    "id": 89,
+    "name": "Text to Speech (browser)",
+    "category": "Utility",
+    "slug": "text-to-speech",
+    "desc": "Speak text via browser"
+  },
+  {
+    "id": 90,
+    "name": "Speech to Text (browser)",
+    "category": "Utility",
+    "slug": "speech-to-text",
+    "desc": "Capture speech via browser (limited)"
+  },
+  {
+    "id": 91,
+    "name": "JSON Schema Generator (basic)",
+    "category": "Utility",
+    "slug": "json-schema-generator",
+    "desc": "Generate a JSON schema skeleton"
+  },
+  {
+    "id": 92,
+    "name": "CSV Validator",
+    "category": "Utility",
+    "slug": "csv-validator",
+    "desc": "Validate CSV structure"
+  },
+  {
+    "id": 93,
+    "name": "Lorem Ipsum Generator",
+    "category": "Utility",
+    "slug": "lorem-ipsum",
+    "desc": "Generate placeholder text"
+  },
+  {
+    "id": 94,
+    "name": "Duplicate Word Highlighter",
+    "category": "Utility",
+    "slug": "duplicate-word-highlighter",
+    "desc": "Find duplicate words"
+  },
+  {
+    "id": 95,
+    "name": "Regex Explainer",
+    "category": "Utility",
+    "slug": "regex-explainer",
+    "desc": "Explain regex patterns (basic)"
+  },
+  {
+    "id": 96,
+    "name": "Sentence Splitter",
+    "category": "Utility",
+    "slug": "sentence-splitter",
+    "desc": "Split paragraph into sentences"
+  },
+  {
+    "id": 97,
+    "name": "Text Statistics",
+    "category": "Utility",
+    "slug": "text-statistics",
+    "desc": "Counts, avg word length, etc."
+  },
+  {
+    "id": 98,
+    "name": "Title Case Converter",
+    "category": "Utility",
+    "slug": "title-case-converter",
+    "desc": "Convert to Title Case"
+  },
+  {
+    "id": 99,
+    "name": "Remove Extra Spaces",
+    "category": "Utility",
+    "slug": "remove-extra-spaces",
+    "desc": "Collapse multiple spaces"
+  },
+  {
+    "id": 100,
+    "name": "Save as File (text)",
+    "category": "Utility",
+    "slug": "save-as-file",
+    "desc": "Save text to a .txt file"
+  },
+  {
+    "id": 101,
+    "name": "AI Blog Title Generator",
+    "category": "AI Text",
+    "slug": "ai-blog-title",
+    "desc": "Template-driven title ideas"
+  },
+  {
+    "id": 102,
+    "name": "AI Meta Description Generator",
+    "category": "AI Text",
+    "slug": "ai-meta-description",
+    "desc": "Generate meta descriptions"
+  },
+  {
+    "id": 103,
+    "name": "AI YouTube Title Generator",
+    "category": "AI Text",
+    "slug": "ai-youtube-title",
+    "desc": "Video title ideas"
+  },
+  {
+    "id": 104,
+    "name": "AI Instagram Caption Generator",
+    "category": "AI Text",
+    "slug": "ai-instagram-caption",
+    "desc": "Caption templates"
+  },
+  {
+    "id": 105,
+    "name": "AI Tweet Generator",
+    "category": "AI Text",
+    "slug": "ai-tweet-generator",
+    "desc": "Short tweet ideas"
+  },
+  {
+    "id": 106,
+    "name": "AI Hashtag Generator",
+    "category": "AI Text",
+    "slug": "ai-hashtag-generator",
+    "desc": "Hashtag suggestions"
+  },
+  {
+    "id": 107,
+    "name": "AI Product Description",
+    "category": "AI Text",
+    "slug": "ai-product-description",
+    "desc": "E-commerce descriptions"
+  },
+  {
+    "id": 108,
+    "name": "AI Email Writer",
+    "category": "AI Text",
+    "slug": "ai-email-writer",
+    "desc": "Email drafts and templates"
+  },
+  {
+    "id": 109,
+    "name": "AI Ad Copy Generator",
+    "category": "AI Text",
+    "slug": "ai-ad-copy",
+    "desc": "Short ad copy templates"
+  },
+  {
+    "id": 110,
+    "name": "AI FAQ Generator",
+    "category": "AI Text",
+    "slug": "ai-faq-generator",
+    "desc": "Generate FAQ list"
+  },
+  {
+    "id": 111,
+    "name": "AI Long-form Outline",
+    "category": "AI Text",
+    "slug": "ai-longform-outline",
+    "desc": "Blog/article outlines"
+  },
+  {
+    "id": 112,
+    "name": "AI Paragraph Rewriter",
+    "category": "AI Text",
+    "slug": "ai-paragraph-rewriter",
+    "desc": "Rewrite paragraphs"
+  },
+  {
+    "id": 113,
+    "name": "AI Sentence Simplifier",
+    "category": "AI Text",
+    "slug": "ai-sentence-simplifier",
+    "desc": "Simplify complex sentences"
+  },
+  {
+    "id": 114,
+    "name": "AI Formalizer",
+    "category": "AI Text",
+    "slug": "ai-formalizer",
+    "desc": "Make tone formal"
+  },
+  {
+    "id": 115,
+    "name": "AI Tone Adjuster",
+    "category": "AI Text",
+    "slug": "ai-tone-adjuster",
+    "desc": "Adjust tone (casual/professional)"
+  },
+  {
+    "id": 116,
+    "name": "AI Bullet Point Extractor",
+    "category": "AI Text",
+    "slug": "ai-bullets",
+    "desc": "Extract bullets from text"
+  },
+  {
+    "id": 117,
+    "name": "AI Summary (short)",
+    "category": "AI Text",
+    "slug": "ai-summary-short",
+    "desc": "Short extractive summary"
+  },
+  {
+    "id": 118,
+    "name": "AI Summary (long)",
+    "category": "AI Text",
+    "slug": "ai-summary-long",
+    "desc": "Longer summary"
+  },
+  {
+    "id": 119,
+    "name": "AI Translate-ish (basic)",
+    "category": "AI Text",
+    "slug": "ai-translate-basic",
+    "desc": "Simple translate helper"
+  },
+  {
+    "id": 120,
+    "name": "AI Content Idea Generator",
+    "category": "AI Text",
+    "slug": "ai-content-ideas",
+    "desc": "Content topic ideas"
+  },
+  {
+    "id": 121,
+    "name": "AI Intro Paragraph",
+    "category": "AI Text",
+    "slug": "ai-intro",
+    "desc": "Intro paragraph generator"
+  },
+  {
+    "id": 122,
+    "name": "AI Conclusion Paragraph",
+    "category": "AI Text",
+    "slug": "ai-conclusion",
+    "desc": "Conclusion generator"
+  },
+  {
+    "id": 123,
+    "name": "AI Blog Keywords",
+    "category": "AI Text",
+    "slug": "ai-blog-keywords",
+    "desc": "Keyword suggestions"
+  },
+  {
+    "id": 124,
+    "name": "AI Heading Generator",
+    "category": "AI Text",
+    "slug": "ai-heading-generator",
+    "desc": "Generate H1/H2/H3 ideas"
+  },
+  {
+    "id": 125,
+    "name": "AI Feature/Benefit Generator",
+    "category": "AI Text",
+    "slug": "ai-feature-benefit",
+    "desc": "Feature-benefit pairs"
+  },
+  {
+    "id": 126,
+    "name": "AI Cold Email Subject",
+    "category": "AI Text",
+    "slug": "ai-cold-email-subject",
+    "desc": "Subject line ideas"
+  },
+  {
+    "id": 127,
+    "name": "AI Job Description Draft",
+    "category": "AI Text",
+    "slug": "ai-job-description",
+    "desc": "Draft job descriptions"
+  },
+  {
+    "id": 128,
+    "name": "AI LinkedIn About",
+    "category": "AI Text",
+    "slug": "ai-linkedin-about",
+    "desc": "LinkedIn About section"
+  },
+  {
+    "id": 129,
+    "name": "AI Meeting Notes Extractor",
+    "category": "AI Text",
+    "slug": "ai-meeting-notes",
+    "desc": "Extract notes and action items"
+  },
+  {
+    "id": 130,
+    "name": "AI Persona Builder",
+    "category": "AI Text",
+    "slug": "ai-persona-builder",
+    "desc": "Quick audience personas"
+  },
+  {
+    "id": 131,
+    "name": "AI Image Prompt Generator",
+    "category": "AI Image",
+    "slug": "ai-image-prompt",
+    "desc": "Prompts for image models"
+  },
+  {
+    "id": 132,
+    "name": "AI Thumbnail Idea Generator",
+    "category": "AI Image",
+    "slug": "ai-thumbnail-ideas",
+    "desc": "Thumbnail concepts"
+  },
+  {
+    "id": 133,
+    "name": "AI Logo Prompt Generator",
+    "category": "AI Image",
+    "slug": "ai-logo-prompt",
+    "desc": "Logo design prompts"
+  },
+  {
+    "id": 134,
+    "name": "AI Wallpaper Prompt Generator",
+    "category": "AI Image",
+    "slug": "ai-wallpaper-prompt",
+    "desc": "Wallpaper prompts"
+  },
+  {
+    "id": 135,
+    "name": "AI Tattoo Idea Generator",
+    "category": "AI Image",
+    "slug": "ai-tattoo-ideas",
+    "desc": "Tattoo prompt ideas"
+  },
+  {
+    "id": 136,
+    "name": "AI Avatar Prompt Generator",
+    "category": "AI Image",
+    "slug": "ai-avatar-prompt",
+    "desc": "Avatar design prompts"
+  },
+  {
+    "id": 137,
+    "name": "AI Moodboard Prompt Generator",
+    "category": "AI Image",
+    "slug": "ai-moodboard-prompt",
+    "desc": "Moodboard concepts"
+  },
+  {
+    "id": 138,
+    "name": "AI Color Palette Generator",
+    "category": "AI Image",
+    "slug": "ai-color-palette",
+    "desc": "Color palette ideas"
+  },
+  {
+    "id": 139,
+    "name": "AI Style Transfer Prompt (concept)",
+    "category": "AI Image",
+    "slug": "ai-style-transfer",
+    "desc": "Style transfer prompts"
+  },
+  {
+    "id": 140,
+    "name": "AI Background Remove Helper (guide)",
+    "category": "AI Image",
+    "slug": "ai-bg-remove-guide",
+    "desc": "Guide + prompt for bg removal"
+  },
+  {
+    "id": 141,
+    "name": "AI Image Caption Generator",
+    "category": "AI Image",
+    "slug": "ai-image-caption",
+    "desc": "Generate captions for images"
+  },
+  {
+    "id": 142,
+    "name": "AI Alt Text Generator",
+    "category": "AI Image",
+    "slug": "ai-alt-text",
+    "desc": "Accessible alt text ideas"
+  },
+  {
+    "id": 143,
+    "name": "AI Photo Title Generator",
+    "category": "AI Image",
+    "slug": "ai-photo-title",
+    "desc": "Short photo titles"
+  },
+  {
+    "id": 144,
+    "name": "AI Meme Captioner",
+    "category": "AI Image",
+    "slug": "ai-meme-caption",
+    "desc": "Funny meme captions"
+  },
+  {
+    "id": 145,
+    "name": "AI Poster Copy Generator",
+    "category": "AI Image",
+    "slug": "ai-poster-copy",
+    "desc": "Short poster copy ideas"
+  },
+  {
+    "id": 146,
+    "name": "AI Social Image Idea",
+    "category": "AI Image",
+    "slug": "ai-social-image",
+    "desc": "Ideas for social images"
+  },
+  {
+    "id": 147,
+    "name": "AI Product Mockup Prompt",
+    "category": "AI Image",
+    "slug": "ai-product-mockup",
+    "desc": "Product mockup prompts"
+  },
+  {
+    "id": 148,
+    "name": "AI Pattern/Texture Prompt",
+    "category": "AI Image",
+    "slug": "ai-pattern-prompt",
+    "desc": "Pattern generation prompts"
+  },
+  {
+    "id": 149,
+    "name": "AI Icon Prompt Generator",
+    "category": "AI Image",
+    "slug": "ai-icon-prompt",
+    "desc": "Icon design prompts"
+  },
+  {
+    "id": 150,
+    "name": "AI Sticker Idea Generator",
+    "category": "AI Image",
+    "slug": "ai-sticker-ideas",
+    "desc": "Sticker prompt ideas"
+  },
+  {
+    "id": 151,
+    "name": "AI HTML Generator",
+    "category": "AI Code",
+    "slug": "ai-html-generator",
+    "desc": "HTML scaffold templates"
+  },
+  {
+    "id": 152,
+    "name": "AI CSS Generator",
+    "category": "AI Code",
+    "slug": "ai-css-generator",
+    "desc": "CSS snippets and layouts"
+  },
+  {
+    "id": 153,
+    "name": "AI JS Snippet Generator",
+    "category": "AI Code",
+    "slug": "ai-js-snippet",
+    "desc": "Small JS snippets"
+  },
+  {
+    "id": 154,
+    "name": "AI Regex Generator",
+    "category": "AI Code",
+    "slug": "ai-regex-generator",
+    "desc": "Regex pattern ideas"
+  },
+  {
+    "id": 155,
+    "name": "AI SQL Query Generator",
+    "category": "AI Code",
+    "slug": "ai-sql-generator",
+    "desc": "SQL query templates"
+  },
+  {
+    "id": 156,
+    "name": "AI Error Explainer",
+    "category": "AI Code",
+    "slug": "ai-error-explainer",
+    "desc": "Explain error messages"
+  },
+  {
+    "id": 157,
+    "name": "AI Code Commenter",
+    "category": "AI Code",
+    "slug": "ai-code-commenter",
+    "desc": "Generate comments for code"
+  },
+  {
+    "id": 158,
+    "name": "AI Function Docstring",
+    "category": "AI Code",
+    "slug": "ai-docstring",
+    "desc": "Docstring templates"
+  },
+  {
+    "id": 159,
+    "name": "AI Refactor Suggestion (hint)",
+    "category": "AI Code",
+    "slug": "ai-refactor",
+    "desc": "Refactor hints"
+  },
+  {
+    "id": 160,
+    "name": "AI Test Case Generator",
+    "category": "AI Code",
+    "slug": "ai-testcase",
+    "desc": "Generate test cases"
+  },
+  {
+    "id": 161,
+    "name": "AI Data Validator Generator",
+    "category": "AI Code",
+    "slug": "ai-data-validator",
+    "desc": "Validation logic templates"
+  },
+  {
+    "id": 162,
+    "name": "AI URL-to-API Mock Generator",
+    "category": "AI Code",
+    "slug": "ai-api-mock",
+    "desc": "Mock API templates"
+  },
+  {
+    "id": 163,
+    "name": "AI Snippet Formatter",
+    "category": "AI Code",
+    "slug": "ai-snippet-formatter",
+    "desc": "Format code snippets"
+  },
+  {
+    "id": 164,
+    "name": "AI CLI Template Generator",
+    "category": "AI Code",
+    "slug": "ai-cli-template",
+    "desc": "CLI scaffolds"
+  },
+  {
+    "id": 165,
+    "name": "AI Readme Starter",
+    "category": "AI Code",
+    "slug": "ai-readme-starter",
+    "desc": "README templates"
+  },
+  {
+    "id": 166,
+    "name": "AI Landing Page Hook",
+    "category": "AI Marketing",
+    "slug": "ai-landing-hook",
+    "desc": "Headline hooks"
+  },
+  {
+    "id": 167,
+    "name": "AI Sales Headline",
+    "category": "AI Marketing",
+    "slug": "ai-sales-headline",
+    "desc": "Sales headline ideas"
+  },
+  {
+    "id": 168,
+    "name": "AI CTA Generator",
+    "category": "AI Marketing",
+    "slug": "ai-cta-generator",
+    "desc": "Call-to-action lines"
+  },
+  {
+    "id": 169,
+    "name": "AI Offer Generator",
+    "category": "AI Marketing",
+    "slug": "ai-offer-generator",
+    "desc": "Offer phrasing ideas"
+  },
+  {
+    "id": 170,
+    "name": "AI Email Sequence Subject",
+    "category": "AI Marketing",
+    "slug": "ai-email-sequence",
+    "desc": "Subject lines for sequences"
+  },
+  {
+    "id": 171,
+    "name": "AI Ad Angle Generator",
+    "category": "AI Marketing",
+    "slug": "ai-ad-angle",
+    "desc": "Ad angle suggestions"
+  },
+  {
+    "id": 172,
+    "name": "AI Value Proposition",
+    "category": "AI Marketing",
+    "slug": "ai-value-prop",
+    "desc": "Value prop templates"
+  },
+  {
+    "id": 173,
+    "name": "AI USP Extractor",
+    "category": "AI Marketing",
+    "slug": "ai-usp-extractor",
+    "desc": "Extract unique selling points"
+  },
+  {
+    "id": 174,
+    "name": "AI Competitor One-liner",
+    "category": "AI Marketing",
+    "slug": "ai-competitor-oneliner",
+    "desc": "Competitor summary"
+  },
+  {
+    "id": 175,
+    "name": "AI Promo Script (30s)",
+    "category": "AI Marketing",
+    "slug": "ai-promo-30s",
+    "desc": "Short promo scripts"
+  },
+  {
+    "id": 176,
+    "name": "AI Promo Script (60s)",
+    "category": "AI Marketing",
+    "slug": "ai-promo-60s",
+    "desc": "Longer promo scripts"
+  },
+  {
+    "id": 177,
+    "name": "AI Growth Hypothesis Generator",
+    "category": "AI Marketing",
+    "slug": "ai-growth-hypothesis",
+    "desc": "Growth experiments ideas"
+  },
+  {
+    "id": 178,
+    "name": "AI Retention Hook",
+    "category": "AI Marketing",
+    "slug": "ai-retention-hook",
+    "desc": "Retention copy ideas"
+  },
+  {
+    "id": 179,
+    "name": "AI Referral Copy",
+    "category": "AI Marketing",
+    "slug": "ai-referral-copy",
+    "desc": "Referral program copy"
+  },
+  {
+    "id": 180,
+    "name": "AI Oneliner Elevator Pitch",
+    "category": "AI Marketing",
+    "slug": "ai-elevator-pitch",
+    "desc": "One-liner pitch"
+  },
+  {
+    "id": 181,
+    "name": "AI Resume Summary Generator",
+    "category": "AI Utility",
+    "slug": "ai-resume-summary",
+    "desc": "Resume summary ideas"
+  },
+  {
+    "id": 182,
+    "name": "AI Bio Generator",
+    "category": "AI Utility",
+    "slug": "ai-bio-generator",
+    "desc": "Short bios for social"
+  },
+  {
+    "id": 183,
+    "name": "AI Name Generator",
+    "category": "AI Utility",
+    "slug": "ai-name-generator",
+    "desc": "Names for products/brands"
+  },
+  {
+    "id": 184,
+    "name": "AI Business Idea Generator",
+    "category": "AI Utility",
+    "slug": "ai-business-ideas",
+    "desc": "Business idea prompts"
+  },
+  {
+    "id": 185,
+    "name": "AI Startup Name Generator",
+    "category": "AI Utility",
+    "slug": "ai-startup-name",
+    "desc": "Startup name ideas"
+  },
+  {
+    "id": 186,
+    "name": "AI Domain Name Ideas",
+    "category": "AI Utility",
+    "slug": "ai-domain-ideas",
+    "desc": "Domain suggestions"
+  },
+  {
+    "id": 187,
+    "name": "AI Tagline Generator",
+    "category": "AI Utility",
+    "slug": "ai-tagline",
+    "desc": "Short taglines"
+  },
+  {
+    "id": 188,
+    "name": "AI Meeting Agenda Generator",
+    "category": "AI Utility",
+    "slug": "ai-meeting-agenda",
+    "desc": "Agenda templates"
+  },
+  {
+    "id": 189,
+    "name": "AI Project Planner (mini)",
+    "category": "AI Utility",
+    "slug": "ai-project-planner",
+    "desc": "Mini project plan"
+  },
+  {
+    "id": 190,
+    "name": "AI Brainstorm List",
+    "category": "AI Utility",
+    "slug": "ai-brainstorm",
+    "desc": "Brainstorm prompts"
+  },
+  {
+    "id": 191,
+    "name": "AI Prioritization Helper",
+    "category": "AI Utility",
+    "slug": "ai-prioritization",
+    "desc": "Prioritize tasks"
+  },
+  {
+    "id": 192,
+    "name": "AI OKR Starter",
+    "category": "AI Utility",
+    "slug": "ai-okr-starter",
+    "desc": "OKR templates"
+  },
+  {
+    "id": 193,
+    "name": "AI Job Title Generator",
+    "category": "AI Utility",
+    "slug": "ai-job-title",
+    "desc": "Job title ideas"
+  },
+  {
+    "id": 194,
+    "name": "AI Interview Qs Generator",
+    "category": "AI Utility",
+    "slug": "ai-interview-qs",
+    "desc": "Interview question lists"
+  },
+  {
+    "id": 195,
+    "name": "AI Candidate Scorecard (template)",
+    "category": "AI Utility",
+    "slug": "ai-scorecard",
+    "desc": "Candidate evaluation template"
+  },
+  {
+    "id": 196,
+    "name": "AI Personal Goals Draft",
+    "category": "AI Utility",
+    "slug": "ai-personal-goals",
+    "desc": "Draft personal goals"
+  },
+  {
+    "id": 197,
+    "name": "AI Habit Tracker Prompt",
+    "category": "AI Utility",
+    "slug": "ai-habit-tracker",
+    "desc": "Habit tracker prompts"
+  },
+  {
+    "id": 198,
+    "name": "AI Email Reply Draft",
+    "category": "AI Utility",
+    "slug": "ai-email-reply",
+    "desc": "Quick reply templates"
+  },
+  {
+    "id": 199,
+    "name": "AI FAQ Draft",
+    "category": "AI Utility",
+    "slug": "ai-faq-draft",
+    "desc": "Draft FAQ content"
+  },
+  {
+    "id": 200,
+    "name": "AI Support Response Template",
+    "category": "AI Utility",
+    "slug": "ai-support-response",
+    "desc": "Support reply templates"
+  }
+]
