@@ -1,46 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Word Frequency Counter | Free Online Tool</title>
-  <meta name="description" content="Count word frequency Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/text/word-frequency.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
+<meta charset="UTF-8">
+<title>Word Frequency Counter | GTTools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui;background:#f8fafc;margin:0}
+.box{max-width:900px;margin:30px auto;padding:20px}
+textarea{width:100%;min-height:200px;padding:12px;font-size:16px}
+pre{background:#fff;border:1px solid #e5e7eb;padding:12px;margin-top:10px}
+button{margin-top:10px;padding:10px 16px;background:#0ea5a4;color:#fff;border:none;border-radius:6px}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
+<div class="box">
+<a href="/">← Back</a>
+<h1>Word Frequency Counter</h1>
+<textarea id="text"></textarea>
+<button onclick="count()">Count</button>
+<pre id="out"></pre>
+</div>
 
-    <h1>Word Frequency Counter</h1>
-    <p class="muted">Count word frequency</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        Word Frequency Counter is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
+<script>
+function count(){
+  const words=document.getElementById("text").value
+    .toLowerCase().match(/\b\w+\b/g)||[];
+  const map={};
+  words.forEach(w=>map[w]=(map[w]||0)+1);
+  document.getElementById("out").textContent =
+    Object.entries(map).sort((a,b)=>b[1]-a[1])
+      .map(([w,c])=>`${w}: ${c}`).join("\n");
+}
+</script>
 </body>
 </html>
