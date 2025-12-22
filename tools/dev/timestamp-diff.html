@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Timestamp Difference | GTTools</title>
+<style>body{font-family:system-ui;background:#f8fafc}input{width:100%;padding:10px;margin-top:8px}</style>
+</head><body>
+<a href="/">← Back</a><h1>Timestamp Difference</h1>
+<input id="a" placeholder="Timestamp A (seconds)">
+<input id="b" placeholder="Timestamp B (seconds)">
+<button onclick="calc()">Calculate</button>
+<input id="o" placeholder="Difference (seconds)">
+<script>
+function calc(){ o.value=Math.abs((+a.value||0)-(+b.value||0)); }
+</script></body></html>
