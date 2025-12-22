@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>AI Keyword Generator | GTTools</title></head>
+<body>
+<a href="/">← Back</a>
+<h1>AI Keyword Generator</h1>
+<input id="kw" placeholder="Main keyword">
+<button onclick="gen()">Generate</button>
+<textarea id="o" style="width:100%;min-height:140px"></textarea>
+<script>
+function gen(){
+  const k=kw.value;
+  o.value = [
+    k,
+    k+' tips',
+    k+' guide',
+    'best '+k,
+    k+' examples',
+    k+' tools'
+  ].join(', ');
+}
+</script>
+</body>
+</html>
 
