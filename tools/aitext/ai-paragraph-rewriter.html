@@ -1,46 +1,20 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>AI Paragraph Rewriter | Free Online Tool</title>
-  <meta name="description" content="Rewrite paragraphs Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/aitext/ai-paragraph-rewriter.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
-</head>
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>AI Paragraph Rewriter | GTTools</title></head>
 <body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
-
-    <h1>AI Paragraph Rewriter</h1>
-    <p class="muted">Rewrite paragraphs</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        AI Paragraph Rewriter is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
+<a href="/">← Back</a>
+<h1>AI Paragraph Rewriter</h1>
+<textarea id="t" style="width:100%;min-height:160px"></textarea>
+<button onclick="rewrite()">Rewrite</button>
+<textarea id="o" style="width:100%;min-height:160px"></textarea>
+<script>
+function rewrite(){
+  o.value = t.value
+    .replace(/\bvery\b/gi,'extremely')
+    .replace(/\bimportant\b/gi,'crucial')
+    .replace(/\bhelp\b/gi,'assist')
+    .replace(/\buse\b/gi,'utilize');
+}
+</script>
 </body>
 </html>
