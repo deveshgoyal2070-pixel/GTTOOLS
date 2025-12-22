@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Binary to Text</title></head>
+<body>
+<div class="box">
+<a href="/">← Back</a>
+<h1>Binary to Text</h1>
+<textarea id="t"></textarea>
+<button onclick="convert()">Convert</button>
+</div>
+<script>
+function convert(){
+ t.value=t.value.split(" ").map(b=>String.fromCharCode(parseInt(b,2))).join("");
+}
+</script>
+</body>
+</html>
