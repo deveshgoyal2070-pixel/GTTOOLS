@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Code Minifier | GTTools</title>
+<style>body{font-family:system-ui;background:#f8fafc}textarea{width:100%;min-height:160px;padding:12px}button{margin:8px 8px 0 0;padding:10px 14px;background:#0ea5a4;color:#fff;border:0;border-radius:6px}</style>
+</head><body>
+<a href="/">← Back</a><h1>HTML / CSS / JS Minifier</h1>
+<textarea id="in" placeholder="Paste code"></textarea>
+<button onclick="min()">Minify</button>
+<textarea id="out" placeholder="Minified output"></textarea>
+<script>
+function min(){
+  let s=in.value;
+  s=s.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,'').replace(/\s+/g,' ').replace(/\s*([{};:,])\s*/g,'$1');
+  out.value=s.trim();
+}
+</script></body></html>
