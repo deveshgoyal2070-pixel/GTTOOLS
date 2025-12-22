@@ -1,46 +1,16 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>SQL Formatter (basic) | Free Online Tool</title>
-  <meta name="description" content="Format SQL queries Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/dev/sql-formatter.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
-</head>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>SQL Formatter | GTTools</title></head>
 <body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
-
-    <h1>SQL Formatter (basic)</h1>
-    <p class="muted">Format SQL queries</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        SQL Formatter (basic) is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+<a href="/">← Back</a><h1>SQL Formatter</h1>
+<textarea id="t" style="width:100%;min-height:180px"></textarea>
+<button onclick="fmt()">Format SQL</button>
+<textarea id="o" style="width:100%;min-height:180px"></textarea>
+<script>
+function fmt(){
+ const kw=['SELECT','FROM','WHERE','AND','OR','INSERT','INTO','VALUES','UPDATE','SET','DELETE','JOIN','LEFT','RIGHT','ON','GROUP BY','ORDER BY'];
+ let s=t.value;
+ kw.forEach(k=>{
+  s=s.replace(new RegExp(k,'gi'),'\n'+k);
+ });
+ o.value=s.trim();
+}
+</script></body></html>
