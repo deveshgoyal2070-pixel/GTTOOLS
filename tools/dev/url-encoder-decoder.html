@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>URL Encoder Decoder | GTTools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui;background:#f8fafc;margin:0}
+.box{max-width:900px;margin:40px auto;padding:20px}
+textarea{width:100%;min-height:160px;padding:12px;font-size:15px}
+button{margin-top:10px;margin-right:8px;padding:10px 16px;background:#0ea5a4;color:#fff;border:none;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="box">
+<a href="/">← Back</a>
+<h1>URL Encoder / Decoder</h1>
+<textarea id="t"></textarea>
+<button onclick="enc()">Encode</button>
+<button onclick="dec()">Decode</button>
+</div>
+
+<script>
+function enc(){ t.value = encodeURIComponent(t.value); }
+function dec(){ 
+  try{ t.value = decodeURIComponent(t.value); }
+  catch(e){ alert("Invalid encoded string"); }
+}
+</script>
+</body>
+</html>
