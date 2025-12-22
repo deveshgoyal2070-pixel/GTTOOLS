@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JWT Decoder | GTTools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui;background:#f8fafc;margin:0}
+.box{max-width:900px;margin:40px auto;padding:20px}
+textarea{width:100%;min-height:120px;padding:12px;font-size:15px}
+pre{background:#fff;border:1px solid #e5e7eb;padding:12px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="box">
+<a href="/">← Back</a>
+<h1>JWT Decoder</h1>
+<textarea id="jwt" placeholder="Paste JWT here"></textarea>
+<button onclick="decode()">Decode</button>
+<pre id="out"></pre>
+</div>
+
+<script>
+function decode(){
+  try{
+    const p = jwt.value.split('.')[1];
+    const json = atob(p.replace(/-/g,'+').replace(/_/g,'/'));
+    out.textContent = JSON.stringify(JSON.parse(json), null, 2);
+  }catch(e){
+    out.textContent = "Invalid JWT";
+  }
+}
+</script>
+</body>
+</html>
