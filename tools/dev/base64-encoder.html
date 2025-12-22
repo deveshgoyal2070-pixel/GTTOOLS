@@ -1,46 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Base64 Encoder | Free Online Tool</title>
-  <meta name="description" content="Encode text to base64 Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/dev/base64-encoder.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
+<meta charset="UTF-8">
+<title>Base64 Encoder | GTTools</title>
+<meta name="description" content="Free Base64 Encoder. Encode text to Base64 online.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui;background:#f8fafc;margin:0}
+.box{max-width:900px;margin:30px auto;padding:20px}
+textarea{width:100%;min-height:220px;padding:12px;font-size:15px}
+button{margin-top:10px;padding:10px 16px;background:#0ea5a4;color:#fff;border:none;border-radius:6px}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
+<div class="box">
+<a href="/">← Back</a>
+<h1>Base64 Encoder</h1>
+<textarea id="text" placeholder="Enter text"></textarea>
+<button onclick="encode()">Encode</button>
+</div>
 
-    <h1>Base64 Encoder</h1>
-    <p class="muted">Encode text to base64</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        Base64 Encoder is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
+<script>
+function encode(){
+  text.value=btoa(unescape(encodeURIComponent(text.value)));
+}
+</script>
 </body>
 </html>
