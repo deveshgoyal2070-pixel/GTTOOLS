@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Color Converter | GTTools</title>
+<style>body{font-family:system-ui;background:#f8fafc}input{width:100%;padding:10px;margin-top:8px}</style>
+</head><body>
+<a href="/">← Back</a><h1>Color Converter</h1>
+<input id="hex" placeholder="#ff8800">
+<button onclick="h2r()">HEX → RGB</button>
+<input id="rgb" placeholder="rgb(255,136,0)">
+<button onclick="r2h()">RGB → HEX</button>
+<script>
+function h2r(){
+ const h=hex.value.replace('#',''); if(h.length!==6)return;
+ const r=parseInt(h.substr(0,2),16),g=parseInt(h.substr(2,2),16),b=parseInt(h.substr(4,2),16);
+ rgb.value=`rgb(${r},${g},${b})`;
+}
+function r2h(){
+ const m=rgb.value.match(/\d+/g); if(!m)return;
+ hex.value='#'+m.map(x=>(+x).toString(16).padStart(2,'0')).join('');
+}
+</script></body></html>
