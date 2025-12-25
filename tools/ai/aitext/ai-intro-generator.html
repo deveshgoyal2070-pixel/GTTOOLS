@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>AI Intro Generator | GTTools</title></head>
+<body>
+<a href="/">← Back</a>
+<h1>AI Intro Generator</h1>
+<input id="topic" placeholder="Topic">
+<button onclick="gen()">Generate Intro</button>
+<textarea id="o" style="width:100%;min-height:160px"></textarea>
+<script>
+function gen(){
+  o.value = `In today's digital world, ${topic.value} has become increasingly important. This guide will help you understand it clearly.`;
+}
+</script>
+</body>
+</html>
