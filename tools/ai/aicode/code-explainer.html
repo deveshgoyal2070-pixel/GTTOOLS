@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Code Explainer | GTTools</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:system-ui;background:#f8fafc;color:#0f172a} .wrap{max-width:900px;margin:30px auto;padding:18px}textarea{width:100%;min-height:220px;padding:12px;border-radius:8px;border:1px solid #e5e7eb}button{margin-top:10px;padding:10px 14px;background:#0ea5a4;color:#fff;border:0;border-radius:8px}pre{background:#fff;padding:12px;border:1px solid #e5e7eb;border-radius:8px;margin-top:10px;white-space:pre-wrap}</style></head><body><div class="wrap"><a href="/">← Back</a><h1>Code Explainer</h1><p>ये functions का आसान explanation दे देता है (heuristic).</p><textarea id="code" placeholder="Paste code..."></textarea><button onclick="explain()">Explain</button><pre id="out"></pre></div><script>
+function explain(){
+  const src=document.getElementById('code').value;
+  const out=document.getElementById('out'); out.textContent='';
+  if(!src.trim()){ out.textContent='Paste code first.'; return; }
+  // simple split by functions (JS + Python)
+  const parts = src.split(/(?=^\s*(?:function\s+|def\s+|[A-Za-z0-9_]+\s*=\s*function|\w+\s*:\s*function))/gim);
+  parts.forEach(block=>{
+    const head = (block.match(/^\s*(?:function\s+([A-Za-z0-9_$]+)|def\s+([A-Za-z0-9_]+)\s*\(|([A-Za-z0-9_]+)\s*=\s*function|([A-Za-z0-9_]+)\s*:\s*function)/m) || []);
+    const name = head[1]||head[2]||head[3]||head[4];
+    if(!name) return;
+    // heuristics: look for keywords in block
+    const keywords = ['fetch','http','axios','readFile','writeFile','curl','socket','db','query','map','filter','reduce','sort','regex','match','replace','split','join','parse','JSON','await','async','try','catch'];
+    let found = keywords.filter(k=> new RegExp(k,'i').test(block)).slice(0,4);
+    const summary = found.length ? `Likely uses: ${found.join(', ')}` : 'Performs manipulation/logic; refine manually';
+    out.textContent += `Function: ${name}\n${summary}\n---\n`;
+  });
+}
+</script></body></html>
