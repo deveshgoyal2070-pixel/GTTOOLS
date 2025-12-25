@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>AI Bullet Generator | GTTools</title></head>
+<body>
+<a href="/">← Back</a>
+<h1>AI Bullet Point Generator</h1>
+<textarea id="t" style="width:100%;min-height:160px"></textarea>
+<button onclick="bul()">Generate Bullets</button>
+<textarea id="o" style="width:100%;min-height:160px"></textarea>
+<script>
+function bul(){
+  const s=t.value.split(/[.!?]/).filter(x=>x.trim());
+  o.value = s.map(x=>'• '+x.trim()).join('\n');
+}
+</script>
+</body>
+</html>
