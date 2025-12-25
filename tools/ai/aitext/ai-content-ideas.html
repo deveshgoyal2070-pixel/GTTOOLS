@@ -1,46 +1,13 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>AI Content Idea Generator | Free Online Tool</title>
-  <meta name="description" content="Content topic ideas Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/aitext/ai-content-ideas.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
-
-    <h1>AI Content Idea Generator</h1>
-    <p class="muted">Content topic ideas</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        AI Content Idea Generator is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>AI Content Ideas | GTTools</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:system-ui;background:#f8fafc;margin:0;color:#0f172a}.container{max-width:900px;margin:32px auto;padding:20px}input,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb}button{margin-top:10px;padding:10px 14px;background:#0ea5a4;color:#fff;border:0;border-radius:8px}.idea{background:#fff;padding:12px;border:1px solid #e5e7eb;border-radius:8px;margin-top:8px}</style></head><body><div class="container"><a href="/">← Back</a><h1>AI Content Ideas</h1><input id="topic" placeholder="Enter niche/topic (eg. 'fitness at home')"><select id="format" style="margin-top:8px;padding:8px;border-radius:8px"><option value="blog">Blog post</option><option value="video">YouTube video</option><option value="short">Short social post</option></select><button onclick="gen()">Generate Ideas</button><div id="out"></div></div><script>
+function gen(){
+ const topic=document.getElementById('topic').value.trim();
+ const format=document.getElementById('format').value;
+ const out=document.getElementById('out'); out.innerHTML='';
+ if(!topic){ out.innerHTML='<div class="idea">Enter a topic.</div>'; return; }
+ const angles=['Beginner Guide','Common Mistakes','Advanced Tips','Case Study','Listicle','How I Did It','Tools & Resources'];
+ angles.slice(0,5).forEach((a,i)=>{
+   const t = format==='video' ? `${a}: ${topic} — Video idea ${i+1}` : format==='short' ? `${a} tweet about ${topic}` : `${a} — ${topic}`;
+   const el=document.createElement('div'); el.className='idea'; el.textContent=t; out.appendChild(el);
+ });
+}
+</script></body></html>
