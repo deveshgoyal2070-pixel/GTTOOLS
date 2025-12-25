@@ -1,46 +1,40 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AI Hashtag Generator | Free Online Tool</title>
-  <meta name="description" content="Hashtag suggestions Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/aitext/ai-hashtag-generator.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
+<meta charset="utf-8">
+<title>AI Meta Description Generator | GTTools</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{font-family:system-ui;background:#f8fafc;margin:0;color:#0f172a}.container{max-width:900px;margin:32px auto;padding:20px}textarea,input{width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #e5e7eb}button{margin-top:10px;padding:10px 14px;background:#0ea5a4;color:#fff;border:0;border-radius:8px;cursor:pointer}.out{margin-top:12px;background:#fff;padding:12px;border:1px solid #e5e7eb;border-radius:8px}</style>
 </head>
 <body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
+<div class="container">
+  <a href="/">← Back</a>
+  <h1>AI Meta Description Generator</h1>
+  <p class="small">Page purpose और target keywords डालो — 155 char के अंदर multiple description बनेंगे।</p>
+  <input id="title" placeholder="Page title (optional)">
+  <input id="keywords" placeholder="Main keywords (comma separated)">
+  <textarea id="purpose" placeholder="Briefly describe page purpose (eg. 'explain remote work pros and tips')"></textarea>
+  <button onclick="gen()">Generate Descriptions</button>
+  <div id="out"></div>
+</div>
 
-    <h1>AI Hashtag Generator</h1>
-    <p class="muted">Hashtag suggestions</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        AI Hashtag Generator is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
+<script>
+function truncate(s,n){ return s.length>n? s.slice(0,n-3)+'...':s; }
+function gen(){
+  const title=document.getElementById('title').value.trim();
+  const keywords=document.getElementById('keywords').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const purpose=document.getElementById('purpose').value.trim();
+  const out=document.getElementById('out'); out.innerHTML='';
+  if(!purpose && !title){ out.innerHTML='<div class="out">Enter purpose or title.</div>'; return; }
+  const kw=keywords.join(' • ');
+  const base = `${title?title+' — ':''}${purpose || keywords.join(' ')}`;
+  const templates = [
+    `${base} Learn practical tips, examples and tools to get started. ${kw}`,
+    `Discover how to ${purpose}. Easy steps, actionable tips and best practices. ${kw}`,
+    `${truncate(base,120)} Improve your results with clear, proven methods.`
+  ];
+  templates.forEach(t=>{ const el=document.createElement('div'); el.className='out'; el.textContent=truncate(t,155); out.appendChild(el); });
+}
+</script>
 </body>
 </html>
