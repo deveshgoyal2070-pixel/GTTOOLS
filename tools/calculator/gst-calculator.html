@@ -1,14 +1,12 @@
 <!DOCTYPE html><html><body>
-<a href="/">← Back</a><h1>EMI Calculator</h1>
-<input id="p" placeholder="Loan Amount">
-<input id="r" placeholder="Interest %">
-<input id="n" placeholder="Months">
+<a href="/">← Back</a><h1>GST Calculator</h1>
+<input id="a" placeholder="Amount">
+<input id="g" placeholder="GST %">
 <button onclick="calc()">Calculate</button>
 <p id="o"></p>
 <script>
 function calc(){
- const m=r.value/1200;
- const emi=(p.value*m*(1+m)**n.value)/((1+m)**n.value-1);
- o.textContent=`EMI: ₹${emi.toFixed(2)}`;
+ const gst=a.value*g.value/100;
+ o.textContent=`GST: ₹${gst} | Total: ₹${(+a.value+gst)}`;
 }
 </script></body></html>
