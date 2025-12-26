@@ -1,46 +1,12 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>AI Pattern/Texture Prompt | Free Online Tool</title>
-  <meta name="description" content="Pattern generation prompts Free online tool. No login required." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://deveshgoyal2070-pixel.github.io/gttools/tools/aiimage/ai-pattern-prompt.html" />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:900px;margin:32px auto;padding:16px}
-    h1{margin-bottom:8px}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-top:16px}
-    .muted{color:#64748b}
-    a{color:#0ea5a4;text-decoration:none}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <a href="/">← Back to all tools</a>
-
-    <h1>AI Pattern/Texture Prompt</h1>
-    <p class="muted">Pattern generation prompts</p>
-
-    <div class="box">
-      <strong>Tool Status</strong>
-      <p>This tool is being improved. Full functionality coming soon.</p>
-    </div>
-
-    <div class="box">
-      <h2>About this tool</h2>
-      <p>
-        AI Pattern/Texture Prompt is a free online tool available on gttools.
-        You can use it directly in your browser without signup.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>More tools</h2>
-      <p>
-        Check other free tools on <a href="/">gttools</a>.
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><title>AI Pattern Prompt</title></head><body style="font-family:system-ui;padding:18px">
+<a href="/">← Back</a><h1>AI Pattern Prompt</h1>
+<input id="motif" placeholder="Motif (leaves, geometric, waves)" style="width:100%;padding:8px">
+<input id="repeat" placeholder="Repeat type (tile, half-drop)" style="width:100%;padding:8px;margin-top:8px">
+<button onclick="gen()" style="margin-top:8px">Generate</button>
+<pre id="out" style="background:#fff;border:1px solid #e5e7eb;padding:10px;margin-top:10px"></pre>
+<script>
+function gen(){
+ const m=motif.value.trim()||'geometric', r=repeat.value.trim()||'tile';
+ out.textContent = `Prompt: Seamless ${m} pattern, ${r} repeat, vector, 300 DPI, harmonious colors.`;
+}
+</script></body></html>
